@@ -9,7 +9,17 @@
 </p>
 
 <p align="center">
-  <a href="https://lab.fribot.com"><strong>🚀 Start Now → lab.fribot.com</strong></a>
+  <a href="https://lab.fribot.com">
+    <img src="https://img.shields.io/badge/🚀%20Start%20Now-Live%20Demo-blue?style=for-the-badge" />
+  </a>
+</p>
+
+<p align="center">
+  <b>👉 Click and start your first decision log</b>
+</p>
+
+<p align="center">
+  <sub>No signup required • Start instantly</sub>
 </p>
 
 ---
@@ -74,6 +84,8 @@ Next: Modify variable inside loop
 ---
 
 ## 🖥️ See How It Works
+
+Experience the actual learning + decision tracking flow:
 
 <p align="center">
   <img src="assets/screenshots/example-ui.png" width="700" />
