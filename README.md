@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://lab.fribot.com">
+  <a href="https://lab.fribot.com/?utm_source=github&utm_medium=readme&utm_campaign=fribot_launch">
     <img src="https://img.shields.io/badge/🚀%20Start%20Now-Live%20Demo-blue?style=for-the-badge" />
   </a>
 </p>
@@ -91,7 +91,7 @@ Experience the actual learning + decision tracking flow:
   <img src="assets/screenshots/example-ui.png" width="700" />
 </p>
 
-👉 **https://lab.fribot.com**
+👉 **https://lab.fribot.com/?utm_source=github&utm_medium=readme&utm_campaign=fribot_demo**
 
 ---
 
@@ -133,5 +133,5 @@ We are building:
 
 ## 📩 Contact
 
-- 🌐 https://lab.fribot.com  
+- 🌐 🌐 https://lab.fribot.com/?utm_source=github&utm_medium=readme&utm_campaign=fribot_contact  
 - 📧 mail@fribot.com  
