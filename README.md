@@ -1,137 +1,250 @@
-<p align="center">
-  <img src="assets/logo/fribot-logo.png" width="120" />
-</p>
+# Fribot Learning
 
-<h1 align="center">Fribot Learning</h1>
-
-<p align="center">
-  Learn coding. Track your thinking. Build real skills.
-</p>
-
-<p align="center">
-  <a href="https://lab.fribot.com/?utm_source=github&utm_medium=readme&utm_campaign=fribot_launch">
-    <img src="https://img.shields.io/badge/🚀%20Start%20Now-Live%20Demo-blue?style=for-the-badge" />
-  </a>
-</p>
-
-<p align="center">
-  <b>👉 Click and start your first decision log</b>
-</p>
-
-<p align="center">
-  <sub>No signup required • Start instantly</sub>
-</p>
+> **Learn through real projects. Improve how you think. Grow into a senior developer.**
 
 ---
 
-## 🧠 What is Fribot Learning?
+## Overview
 
-Fribot Learning is a **project-based coding learning system**  
-combined with a **decision logging method**.
+Fribot Learning is a **Project-Based Coding Education Platform** that combines:
 
-You don’t just learn code.  
-You learn how to:
-
-- think through problems  
-- make decisions  
-- improve your reasoning  
-
----
-
-## ⚡ Why this is different
-
-Most coding education teaches:
-
-- syntax  
-- tutorials  
-- copy & paste  
-
-But real growth comes from:
-
-👉 **understanding your own thinking**
-
----
-
-## 🔁 Learning Loop
-
-```
-Learn → Get Stuck → Record → Reflect → Improve
-```
-
-
-This is the core of real growth.
-
----
-
-## 🪞 Decision Logging (핵심 개념)
-
-When you get stuck, you record:
-
-- What you tried  
-- What failed  
-- What you think is wrong  
-- What you will try next  
-
-### Example
-
-```
-Goal: Understand loop logic
-Problem: Infinite loop
-Judgment: Condition not updating
-Next: Modify variable inside loop
-```
-
----
-
-## 🖥️ See How It Works
-
-Experience the actual learning + decision tracking flow:
-
-<p align="center">
-  <img src="assets/screenshots/example-ui.png" width="700" />
-</p>
-
-👉 **https://lab.fribot.com/?utm_source=github&utm_medium=readme&utm_campaign=fribot_demo**
-
----
-
-## 🧩 System Architecture
-
-- Learning (Projects)
-- Decision Logging
+- GitHub Workflow
 - Reflection
-- Pattern Analysis *(InnerMirror)*
+- AI-assisted PBL Coaching
+- Decision Review
+
+Instead of teaching only programming syntax, Fribot helps developers improve **how they think while building software**.
+
+The goal is not simply to produce developers who write code.
+
+The goal is to cultivate developers who continuously improve the quality of their technical decisions.
 
 ---
 
-## 🔍 Philosophy
+## Why Fribot?
 
-> Learning is not consuming knowledge.  
-> Learning is evolving your decisions.
+Traditional coding education focuses on:
 
----
+- Programming syntax
+- Tutorials
+- Algorithms
+- Copy & paste examples
 
-## 🛠️ Tech (internal)
+Fribot focuses on:
 
-- React / TypeScript  
-- Supabase  
-- Fastify  
+- Real software projects
+- GitHub-based development
+- Reflection
+- Decision evolution
+- Long-term engineering growth
 
----
-
-## 🚧 Status
-
-Early stage (MVP)
-
-We are building:
-
-- real learning flow  
-- decision-based feedback system  
-- AI-assisted thinking improvement  
+> **Code is the result.  
+Decision quality is the real learning objective.**
 
 ---
 
-## 📩 Contact
+## Learning Workflow
 
-- 🌐 🌐 https://lab.fribot.com/?utm_source=github&utm_medium=readme&utm_campaign=fribot_contact  
-- 📧 mail@fribot.com  
+```text
+Learn
+
+↓
+
+Build
+
+↓
+
+Commit
+
+↓
+
+Reflect
+
+↓
+
+GitHub Analyze
+
+↓
+
+PBL Coaching
+
+↓
+
+Decision Review
+
+↓
+
+Improve
+```
+
+Every project becomes part of your long-term growth.
+
+---
+
+## Decision Review
+
+Fribot goes beyond traditional code review.
+
+Instead of asking only
+
+> "Does the code work?"
+
+Fribot asks
+
+- Did you define the real problem?
+- Did you investigate the root cause?
+- Did you compare alternatives?
+- Did you consider architectural impact?
+- What would you improve next time?
+
+The objective is continuous improvement rather than evaluation.
+
+---
+
+## System Architecture
+
+```text
+Fribot Learning
+
+↓
+
+GitHub Projects
+
+↓
+
+InnerMirror Runtime
+
+↓
+
+PBL Coaching
+
+↓
+
+Decision Review
+
+↓
+
+Growth Portfolio
+```
+
+GitHub records **code evolution**.
+
+InnerMirror records **decision evolution**.
+
+Together they help developers improve not only what they build, but also how they think.
+
+---
+
+## Educational Philosophy
+
+> Learning is not consuming knowledge.
+>
+> Learning is improving the quality of your decisions.
+
+Software engineering is fundamentally a decision-making discipline.
+
+Programming skills improve through continuous reflection on those decisions.
+
+---
+
+## Foundation Documentation
+
+The long-term philosophy and architecture of the project are defined in:
+
+```text
+docs/
+
+├── foundation/
+│   ├── README.md
+│   ├── 01_FOUNDATION_PHILOSOPHY.md
+│   ├── 02_REPOSITORY_ARCHITECTURE.md
+│   ├── 03_DEVELOPMENT_PRINCIPLES.md
+│   └── 04_REPOSITORY_ROLES.md
+│
+├── architecture/
+│
+└── roadmap/
+```
+
+Developers contributing to Fribot are strongly encouraged to read the Foundation documents before implementing new features.
+
+---
+
+## Current Status
+
+Current Version
+
+```text
+0.x.x
+```
+
+Current Stage
+
+**Foundation + MVP Development**
+
+Current priorities
+
+- GitHub Integration
+- Reflection Workflow
+- PBL Coaching
+- Decision Review
+- Growth Portfolio
+
+---
+
+## Technology
+
+### Public Platform
+
+- React
+- TypeScript
+
+### Private Runtime
+
+- Fastify
+- Supabase
+- InnerMirror Runtime
+
+---
+
+## Repository Structure
+
+| Repository | Purpose |
+|------------|---------|
+| **fribot-learning** | Project-Based Coding Education Platform |
+| **innermirror-landing** | User Interface |
+| **innermirror-runtime-private** | Decision Intelligence Runtime |
+| **innermirror-engine-private** | Experimental Research |
+| **fribot-flow-timeline** | Historical Development Archive |
+
+---
+
+## Contributing
+
+Educational collaboration is always welcome.
+
+Before contributing, please read the Foundation Documentation to understand the project's philosophy, architecture, and development principles.
+
+---
+
+## License
+
+This project is distributed under the **Fribot Educational License 1.0 (FEL-1.0)**.
+
+Educational use by individuals, schools, universities, instructors, and companies is encouraged.
+
+Commercial redistribution of official educational materials, commercial cloning of the Fribot platform, and use of proprietary decision intelligence technologies are restricted.
+
+See the **LICENSE** file for details.
+
+---
+
+## Contact
+
+Website
+
+https://lab.fribot.com/
+
+Email
+
+mail@fribot.com

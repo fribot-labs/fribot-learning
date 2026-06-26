@@ -1,0 +1,153 @@
+# LICENSE
+
+**Fribot Educational License 1.0 (FEL-1.0)**
+
+Copyright (c) 2026 Fribot
+
+---
+
+# Purpose
+
+The Fribot project is developed to advance project-based coding education and improve developers' decision-making abilities through real software development.
+
+This license encourages educational use while protecting the originality of the Fribot platform, its educational content, and its proprietary decision intelligence technologies.
+
+---
+
+# Educational Use
+
+The following activities are freely permitted for educational purposes.
+
+Individuals, schools, universities, instructors, educational organizations, and companies may:
+
+- use this repository for teaching
+- use project templates during education
+- modify source code for learning
+- create derivative educational examples
+- conduct workshops and training
+- use the repository in classrooms
+- use the repository for internal employee education
+
+No separate permission is required for these educational activities.
+
+---
+
+# Source Code
+
+The source code contained in this public repository may be studied, modified, and reused for educational purposes.
+
+Developers are encouraged to learn from the implementation and adapt ideas to their own educational projects.
+
+---
+
+# Educational Materials
+
+The educational materials created by Fribot remain copyrighted.
+
+This includes, but is not limited to:
+
+- PDF books
+- official learning documents
+- project templates
+- illustrations
+- diagrams
+- videos
+- course materials
+- original documentation
+
+These materials may be used for education.
+
+However, they may not be commercially redistributed, republished, sold, or included in commercial educational products without written permission from Fribot.
+
+---
+
+# Commercial Restrictions
+
+The following activities are not permitted without prior written permission.
+
+- Selling Fribot educational materials
+- Republishing official PDF documents
+- Redistributing official learning content as commercial products
+- Creating commercial training packages primarily based on Fribot educational materials
+- Using Fribot trademarks to promote commercial products
+
+---
+
+# Platform Protection
+
+The Fribot platform architecture is publicly documented to encourage learning.
+
+However, this license does not grant permission to create commercial services that substantially reproduce:
+
+- the Fribot platform identity
+- the InnerMirror service identity
+- the overall Fribot learning workflow
+- the Decision Review system
+- the PBL Coaching service
+- Fribot branding or trademarks
+
+Educational experimentation is encouraged.
+
+Commercial platform cloning is prohibited.
+
+---
+
+# Private Runtime
+
+This license applies only to public repositories.
+
+Private repositories, including but not limited to:
+
+- innermirror-runtime-private
+- innermirror-engine-private
+
+remain proprietary.
+
+Their source code, runtime logic, decision intelligence models, coaching algorithms, prompt engineering, and related intellectual property are not covered by this educational license.
+
+All rights remain reserved.
+
+---
+
+# Attribution
+
+When practical, educational reuse should include attribution.
+
+Suggested attribution:
+
+> Based on the Fribot Educational Platform
+> https://github.com/fribot
+
+Attribution is appreciated but not mandatory for internal educational use.
+
+---
+
+# Warranty
+
+This software and educational material are provided "as is", without warranty of any kind.
+
+The authors shall not be liable for any damages arising from the use of this project.
+
+---
+
+# Future Versions
+
+Fribot may publish updated versions of this license as the ecosystem evolves.
+
+Repositories may specify which version of the Fribot Educational License applies.
+
+---
+
+# Guiding Principle
+
+Learn freely.
+
+Teach freely.
+
+Build responsibly.
+
+Respect original educational content.
+
+Respect proprietary decision intelligence.
+
+The goal of Fribot is to expand learning opportunities while protecting the originality of the platform and its long-term innovation.
