@@ -219,6 +219,39 @@ Current priorities
 
 ---
 
+## Repository Boundary
+
+This repository is the public education platform of the Fribot ecosystem.
+
+It owns:
+
+- PBL learning structure
+- learning templates
+- public educational documentation
+- foundation documentation
+- MVP roadmap
+
+It does not own:
+
+- AI runtime logic
+- Decision Review engine
+- PBL Coaching algorithm
+- private Reflection analysis
+- Memory processing
+- proprietary decision intelligence
+
+Private Runtime responsibilities belong to `innermirror-runtime-private`.
+
+User interface responsibilities belong to `innermirror-landing`.
+
+For detailed boundary rules, see:
+
+```text
+docs/architecture/REPOSITORY_BOUNDARY.md
+```
+
+---
+
 ## Contributing
 
 Educational collaboration is always welcome.

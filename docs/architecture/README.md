@@ -217,3 +217,8 @@ Clear responsibilities create maintainable software.
 Maintainable software enables long-term learning.
 
 The Architecture Documentation exists to preserve those responsibilities as the Fribot ecosystem evolves.
+
+---
+
+This repository documents the ecosystem architecture but does not implement the private runtime.
+Runtime implementation belongs to innermirror-runtime-private.
