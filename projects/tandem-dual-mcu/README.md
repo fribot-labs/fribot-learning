@@ -1,57 +1,48 @@
 # Tandem Dual MCU
 
-> Status: MVP Project (Planned)  
-> Project ID: `tandem-dual-mcu`  
-> Difficulty: Intermediate  
-> Estimated Duration: 2–4 Weeks
+> **Status:** MVP Project (In Development)  
+> **Project ID:** `tandem-dual-mcu`  
+> **Difficulty:** Intermediate  
+> **Estimated Duration:** 2–4 Weeks
 
 ---
 
-# Project Purpose
+# Overview
 
-Modern robotic systems rarely rely on a single processor.
+The **Tandem Dual MCU** project introduces one of the most important ideas in modern embedded systems:
 
-As systems become larger, responsibilities are naturally divided across
-multiple controllers.
+> **A complex robotic system becomes easier to understand when responsibilities are clearly separated and connected through communication.**
 
-This project introduces one of the most important concepts in embedded
-systems:
+Unlike traditional robotics projects that rely on a single microcontroller, this project uses two independent controllers that cooperate to produce one robot behavior.
 
-> **Why should different processors have different responsibilities?**
+The learner gradually discovers that communication is not simply a technical feature.
 
-The learner does not simply connect two microcontrollers.
-
-Instead, the learner gradually discovers why large systems become easier to
-understand, maintain, and extend when responsibilities are clearly divided.
+It is the bridge that allows independently responsible components to become one system.
 
 ---
 
 # Why This Project?
 
-Many embedded projects begin with a single controller.
+Many beginner robotics projects place every responsibility inside a single microcontroller.
 
-Initially, this approach works well.
+Initially this works well.
 
-As new features are added:
+As more features are added:
 
 - sensors,
 - motors,
-- communication,
+- wireless communication,
 - displays,
-- wireless networking,
 - autonomous behaviors,
+- user interaction,
 
-the software gradually becomes more difficult to understand.
+the software gradually becomes more difficult to understand and maintain.
 
 Eventually the learner begins asking:
 
-> "Should one controller really do everything?"
+> **Should one controller really do everything?**
 
-This project allows that question to emerge naturally.
-
-The learner first experiences a working single-controller system.
-
-Only then does the project introduce a second controller.
+This project allows that question to emerge naturally through practical experimentation rather than theoretical explanation.
 
 ---
 
@@ -59,22 +50,81 @@ Only then does the project introduce a second controller.
 
 By completing this project, the learner should understand:
 
-- why systems become complex,
-- why responsibilities should be divided,
-- how two controllers cooperate,
-- how communication replaces direct control,
-- why modular systems are easier to evolve.
+- why modern robotic systems divide responsibilities,
+- why communication is part of software architecture,
+- how independent processors cooperate,
+- how one robot can behave as one system,
+- why modular systems scale more effectively.
 
-The learner is **not** expected to master distributed systems.
+The learner is **not** expected to master distributed computing.
 
-The objective is to experience the first practical step toward distributed
-thinking.
+The objective is to experience the first practical step toward **system thinking**.
 
 ---
 
-# Expected Learning Experience
+# What You Will Build
 
-The project follows the standard Fribot PBL learning flow.
+The learner builds one robotic system using two cooperating microcontrollers.
+
+```text
+micro:bit
+
+↓
+
+I2C Communication
+
+↓
+
+Arduino
+
+↓
+
+Servo Motors
+
+↓
+
+Robot Movement
+```
+
+The robot itself is only the learning tool.
+
+The true objective is understanding responsibility, communication, and collaboration.
+
+---
+
+# Hardware Responsibilities
+
+## micro:bit
+
+Primary responsibilities
+
+- MicroPython execution
+- user interaction
+- built-in sensors
+- high-level decision making
+- I2C command generation
+
+---
+
+## Arduino
+
+Primary responsibilities
+
+- servo motor control
+- digital and analog I/O
+- hardware execution
+- low-level timing
+- I2C command processing
+
+Neither processor is "better."
+
+Each processor performs a different responsibility.
+
+---
+
+# Learning Flow
+
+Every Fribot project follows the same learner experience.
 
 ```text
 Start
@@ -96,52 +146,9 @@ Understand
 Reflect
 ```
 
-Unlike a traditional communication tutorial,
-this project gradually introduces collaboration between independent systems.
+The learner first experiences a working system.
 
----
-
-# What You Will Build
-
-The learner will build a robotic system consisting of two independent
-microcontrollers.
-
-Typical responsibilities may include:
-
-Controller A
-
-- sensor processing,
-- user input,
-- wireless communication.
-
-Controller B
-
-- motor control,
-- actuator management,
-- low-level hardware execution.
-
-The exact hardware configuration may change,
-but the learning objective remains the same.
-
----
-
-# What You Will Learn
-
-Through this project the learner should begin understanding:
-
-- responsibility separation,
-- communication,
-- message passing,
-- synchronization,
-- independent execution,
-- modular design,
-- scalability,
-- fault isolation.
-
-The learner is not expected to master every concept.
-
-Instead, the learner should recognize why these concepts become necessary
-as systems grow.
+Only after that experience does the learner begin exploring why the architecture was designed that way.
 
 ---
 
@@ -149,133 +156,159 @@ as systems grow.
 
 ## Stage 1 — Start
 
-Prepare the hardware and development environment.
+Understand the complete system before writing code.
 
-Understand:
+Topics include:
 
-- the overall project goal,
-- the hardware configuration,
-- the role of each controller,
-- the expected final behavior.
+- project objective
+- hardware overview
+- processor responsibilities
+- communication overview
+- expected robot behavior
+
+The learner begins by seeing the entire architecture.
 
 ---
 
 ## Stage 2 — Run
 
-Execute the prepared example.
+Execute the prepared Tandem Dual MCU project.
 
-Verify that:
+Observe:
 
-- both controllers operate correctly,
-- communication works,
-- the expected robotic behavior appears.
+- micro:bit startup,
+- communication,
+- Arduino execution,
+- robot movement.
 
-The learner first confirms a working baseline.
+The learner confirms a working baseline before making any changes.
 
 ---
 
 ## Stage 3 — Modify
 
-Make one controlled modification.
+Modify one small part of the system.
 
-Examples:
+Examples include:
 
-- change a communication interval,
-- modify one controller's responsibility,
-- alter one message format,
-- adjust one synchronization rule.
+- movement speed,
+- movement duration,
+- direction,
+- user input,
+- command timing.
 
-Observe how this modification changes the system.
+Only one change should be made at a time.
+
+The learner observes how a software change propagates through the entire robot.
 
 ---
 
 ## Stage 4 — Understand
 
-Compare the original and modified system.
+Step back from the code.
 
-Begin asking:
+Instead of asking:
 
-- Which controller should own this responsibility?
-- Which information should be shared?
-- Which information should remain local?
-- What happens when communication fails?
+> "How does this function work?"
 
-The learner begins seeing the robot as a collaboration of independent
-systems rather than one large program.
+begin asking:
+
+> "How does the complete system work?"
+
+Topics include:
+
+- responsibility separation,
+- communication,
+- architectural boundaries,
+- debugging strategy,
+- system thinking.
 
 ---
 
 ## Stage 5 — Reflect
 
-Record how your understanding changed.
+Reflect on how your understanding has changed.
 
-Example Reflection question:
+Example questions:
 
-> **How has your understanding of responsibility separation changed since beginning this project?**
+- Why do two processors cooperate?
+- What responsibility belongs to each processor?
+- How has your understanding of communication changed?
+- What architectural idea became clear during the project?
 
-Reflection is completed through InnerMirror.
+Reflection continues through InnerMirror.
 
 ---
 
 # Required Hardware
 
-Replace this section with the actual hardware configuration.
+This MVP project is based on the following hardware.
 
-Typical examples:
+## Controllers
 
-- Microcontroller A
-- Microcontroller B
-- Communication interface
-- Robot chassis
-- Motors
-- Sensors
-- USB cables
-- Power supply
+- micro:bit v2
+- Arduino Uno (microbit-abot compatible)
 
-The project documentation should clearly distinguish required hardware from
-optional extensions.
+---
+
+## Robot
+
+- Tandem Base Robot
+- two continuous rotation servos
+- battery pack
+- USB cable
+
+Additional sensors may be introduced in future versions.
 
 ---
 
 # Required Software
 
-Replace this section with project-specific software.
-
-Typical examples:
+The learner should prepare:
 
 - Arduino IDE
-- Visual Studio Code
-- PlatformIO
-- Communication library
-- Robot control library
+- micro:bit Python Editor (or equivalent)
+- MicroAbot Library
+- required project source code
 
-Only specify versions when compatibility requires them.
+The project documentation specifies any version requirements only when compatibility requires them.
 
 ---
 
-# Starter Materials
+# Starter Project
 
-The project provides starter materials that already demonstrate basic
-communication.
-
-Typical structure:
+The executable project is organized as follows.
 
 ```text
-starter-code/
+starter-project/
 
-controller-a/
+01_basic_tandem_drive/
 
-controller-b/
+02_button_command/
 
-README.md
-
-references/
+03_sensor_role_split/
 ```
 
-The learner begins from a working example.
+Each stage builds upon the previous one.
 
-The learner is not expected to design a complete communication framework
-from scratch.
+The learner always begins from a working example rather than an empty project.
+
+---
+
+# What You Will Learn
+
+Through this project the learner begins understanding:
+
+- responsibility separation,
+- command generation,
+- message passing,
+- communication,
+- modular architecture,
+- debugging by system layers,
+- collaboration between independent processors,
+- system thinking.
+
+The project emphasizes understanding rather than memorization.
 
 ---
 
@@ -283,23 +316,23 @@ from scratch.
 
 The project is complete when the learner can:
 
-- execute the prepared dual-controller system,
-- modify one communication behavior,
-- explain one responsibility assigned to each controller,
-- describe one benefit of separating responsibilities,
-- explain one communication relationship,
-- complete a Reflection in InnerMirror.
+- execute the prepared Tandem Dual MCU system,
+- modify one robot behavior,
+- explain the responsibility of each processor,
+- describe the communication flow,
+- identify one architectural boundary,
+- explain why responsibility separation improves system design,
+- complete a Reflection through InnerMirror.
 
-The learner is **not** expected to implement a production-quality
-distributed architecture.
+The learner is **not** expected to design a production-quality distributed system.
 
 ---
 
 # Relationship with GitHub
 
-GitHub is recommended.
+GitHub is recommended but optional.
 
-The learner may record:
+Learners may record:
 
 - commits,
 - branches,
@@ -308,29 +341,24 @@ The learner may record:
 
 However,
 
-GitHub is not required before the learner can begin the project.
-
-The project should remain approachable for learners who are still becoming
-comfortable with GitHub.
+GitHub should never become a barrier to beginning the project.
 
 ---
 
 # Relationship with InnerMirror
 
-This project naturally concludes with Reflection.
-
-The intended experience is:
+The final stage naturally continues into InnerMirror.
 
 ```text
-Dual MCU Project
+Tandem Dual MCU
 
 ↓
 
-Practical Collaboration Experience
+Practical Experience
 
 ↓
 
-Reflection Entry
+Reflection
 
 ↓
 
@@ -338,14 +366,16 @@ InnerMirror
 
 ↓
 
-Insight
+Long-term Understanding
 ```
 
-Reflection remains a normal InnerMirror Reflection.
+Reflection remains a standard InnerMirror Reflection.
 
 The learner writes directly.
 
 No project-specific Reflection type is introduced.
+
+No project metadata is automatically transferred during the MVP.
 
 ---
 
@@ -354,31 +384,79 @@ No project-specific Reflection type is introduced.
 This project intentionally excludes:
 
 - distributed operating systems,
-- real-time scheduling theory,
 - advanced networking,
-- cloud robotics,
 - ROS architecture,
+- cloud robotics,
 - distributed databases,
 - fault-tolerant consensus,
-- multi-agent AI.
+- swarm robotics,
+- multi-agent AI,
+- AI orchestration.
 
 Those topics belong to future projects.
 
-This project focuses on one practical discovery:
+The purpose of this project is much simpler.
 
-> **A system becomes easier to understand when responsibilities are clearly divided.**
+> **One robot can become easier to understand when different responsibilities are assigned to different processors.**
+
+---
+
+# Relationship with Other Fribot Projects
+
+The **Class Concept Robot** project teaches:
+
+```text
+State
+
++
+
+Behavior
+
+↓
+
+Class
+```
+
+The **Tandem Dual MCU** project teaches:
+
+```text
+Responsibility
+
++
+
+Communication
+
+↓
+
+System
+```
+
+Together,
+
+the two projects introduce two complementary ideas of software engineering.
+
+```text
+Class
+
+↓
+
+Organizes related state and behavior.
+
+System
+
+↓
+
+Organizes related responsibilities.
+```
 
 ---
 
 # Foundation Principle
 
-A learner should first experience one working controller.
+A learner should first experience a working dual-controller robot.
 
-Then experience two cooperating controllers.
+Only after observing that experience should the learner begin asking:
 
-Only after that experience should the learner begin asking:
+> **Why does separating responsibilities often produce a simpler and more maintainable system?**
 
-> **Why is dividing responsibility often better than putting everything into one program?**
-
-This project is designed to let that understanding emerge naturally through
-practical experimentation rather than through theoretical explanation.
+This project is designed to let that understanding emerge naturally through practical experimentation rather than through theoretical explanation.
