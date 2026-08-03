@@ -1,14 +1,20 @@
 # Documentation Index
 
-This document provides a complete navigation map for the Fribot Learning documentation.
+This document provides the complete navigation map for the Fribot Learning documentation.
 
-The documentation is organized hierarchically so that both developers and AI assistants can quickly understand where information belongs.
+The documentation is intentionally organized so that both developers and AI assistants can quickly understand:
+
+- where information belongs,
+- why it exists,
+- and how each document relates to implementation.
+
+The goal is consistency rather than documentation volume.
 
 ---
 
-# Documentation Structure
+# Documentation Hierarchy
 
-```
+```text
 docs/
 
 ├── README.md
@@ -22,33 +28,89 @@ docs/
 │   └── 04_REPOSITORY_ROLES.md
 │
 ├── architecture/
+│   ├── README.md
+│   ├── REPOSITORY_BOUNDARY.md
+│   ├── CROSS_REPOSITORY_BOUNDARY.md
+│   ├── CROSS_REPOSITORY_GOVERNANCE.md
+│   ├── SERVICE_DATA_FLOW.md
+│   ├── SERVICE_RESPONSIBILITY_MATRIX.md
+│   └── PROJECT_TEMPLATE_ARCHITECTURE.md
 │
 └── roadmap/
+    ├── README.md
     └── PBL_MVP_MASTER_PLAN.md
 ```
 
 ---
 
+# Documentation Layers
+
+The documentation is organized into five primary responsibility layers,
+with Roadmap Documentation controlling implementation order.
+
+```text
+Foundation
+
+↓
+
+Architecture
+
+↓
+
+Project Templates
+
+↓
+
+Implementation
+
+↓
+
+Pull Requests
+```
+
+Each layer answers a different question.
+
+| Layer | Question |
+|--------|----------|
+| Foundation | Why does the project exist? |
+| Architecture | How is the system organized? |
+| Project Templates | How does the learner experience the project? |
+| Implementation | How is the feature implemented? |
+| Pull Requests | How did the implementation evolve? |
+
+---
+
 # Foundation Documentation
 
-Purpose
+## Purpose
 
-Defines the permanent philosophy and architectural principles of the Fribot ecosystem.
+Defines the permanent philosophy of the Fribot ecosystem.
 
-These documents change very rarely.
+Foundation documents describe:
 
-Documents
+- educational philosophy,
+- repository roles,
+- development principles,
+- long-term architectural direction.
+
+Foundation documents should change very rarely.
+
+---
+
+## Documents
 
 | Document | Purpose |
 |----------|---------|
 | 01_FOUNDATION_PHILOSOPHY.md | Vision, mission, educational philosophy |
-| 02_REPOSITORY_ARCHITECTURE.md | Repository architecture and system boundaries |
-| 03_DEVELOPMENT_PRINCIPLES.md | Development rules and Pull Request principles |
-| 04_REPOSITORY_ROLES.md | Repository responsibilities and lifecycle |
+| 02_REPOSITORY_ARCHITECTURE.md | Repository architecture and boundaries |
+| 03_DEVELOPMENT_PRINCIPLES.md | Development principles |
+| 04_REPOSITORY_ROLES.md | Repository responsibilities |
 
-Recommended Reading Order
+---
 
-```
+## Recommended Reading Order
+
+```text
 01
 
 ↓
@@ -68,50 +130,66 @@ Recommended Reading Order
 
 # Architecture Documentation
 
-Purpose
+## Purpose
 
-Describes the technical implementation of the system.
+Defines how the philosophy is implemented.
 
-Examples
+Architecture documents describe:
 
-- Runtime Architecture
-- API Design
-- Data Flow
-- Database Design
-- Security Architecture
+- repository boundaries,
+- service boundaries,
+- project template architecture,
+- public implementation structure,
+- integration strategy.
 
-These documents evolve together with implementation.
+Architecture documents evolve together with implementation.
+
+---
+
+## Documents
+
+| Document | Purpose |
+|----------|---------|
+| REPOSITORY_BOUNDARY.md | Repository ownership |
+| CROSS_REPOSITORY_BOUNDARY.md | Repository interaction |
+| CROSS_REPOSITORY_GOVERNANCE.md | Governance rules |
+| SERVICE_DATA_FLOW.md | Public service flow |
+| SERVICE_RESPONSIBILITY_MATRIX.md | Responsibility allocation |
+| PROJECT_TEMPLATE_ARCHITECTURE.md | Common learner-facing project structure |
 
 ---
 
 # Roadmap Documentation
 
-Purpose
+## Purpose
 
-Defines what will be developed.
+Defines what will be implemented.
 
 Roadmap documents are expected to evolve continuously.
 
-Current Documents
+Current documents:
 
 | Document | Purpose |
 |----------|---------|
-| PBL_MVP_MASTER_PLAN.md | Official MVP development roadmap |
+| PBL_MVP_MASTER_PLAN.md | MVP implementation roadmap |
 
-Future Examples
+Future roadmap documents may include:
 
 - Release Plan
 - Feature Roadmap
 - Phase Planning
-- Commercial Roadmap
+
+Roadmap documents describe future implementation.
+
+They do not redefine architecture.
 
 ---
 
 # Repository Relationship
 
-Documentation belongs to the entire Fribot ecosystem.
+The Fribot ecosystem currently consists of multiple repositories.
 
-```
+```text
 fribot-learning
 
 ↓
@@ -121,29 +199,29 @@ innermirror-landing
 ↓
 
 innermirror-runtime-private
-
-↓
-
-Research
-
-↓
-
-Archive
 ```
 
-Although documentation is maintained inside the **fribot-learning** repository, its principles apply across all repositories.
+Each repository owns different responsibilities.
+
+The documentation in this repository defines only the public PBL platform.
+
+Private Runtime implementation belongs to:
+
+```text
+innermirror-runtime-private
+```
 
 ---
 
-# Document Lifecycle
+# Document Stability
 
-| Category | Stability |
-|----------|-----------|
+| Category | Expected Stability |
+|----------|--------------------|
 | Foundation | Very Stable |
-| Architecture | Medium |
+| Architecture | Stable |
 | Roadmap | Frequently Updated |
-| Release Notes | Per Version |
-| Research | Experimental |
+| Project Templates | Frequently Updated |
+| Pull Requests | Historical |
 
 ---
 
@@ -151,7 +229,9 @@ Although documentation is maintained inside the **fribot-learning** repository, 
 
 ## New Contributors
 
-```
+Recommended reading order:
+
+```text
 README
 
 ↓
@@ -160,11 +240,11 @@ Foundation
 
 ↓
 
-Roadmap
+Architecture
 
 ↓
 
-Architecture
+Roadmap
 
 ↓
 
@@ -173,13 +253,26 @@ Implementation
 
 ---
 
-## Developers
+## Project Authors
 
-Start with
+Read first:
 
 - Foundation Documentation
-- Repository Architecture
 - Development Principles
+- Project Template Architecture
+
+before creating a new learner-facing project.
+
+---
+
+## Developers
+
+Read first:
+
+- Repository Architecture
+- Repository Boundary
+- Service Data Flow
+- Project Template Architecture
 
 before implementing new features.
 
@@ -187,14 +280,10 @@ before implementing new features.
 
 ## AI Assistants
 
-Recommended context loading order
+Recommended context loading order:
 
-```
+```text
 Foundation
-
-↓
-
-Roadmap
 
 ↓
 
@@ -202,51 +291,47 @@ Architecture
 
 ↓
 
-Implementation
+Roadmap
+
+↓
+
+Current Pull Request
 ```
 
-This order provides the philosophical context before implementation details.
-
----
-
-# Future Documentation Categories
-
-As the project grows, additional categories may be added.
-
-Examples
-
-```
-api/
-
-research/
-
-release/
-
-tutorials/
-
-adr/
-
-design/
-
-security/
-```
-
-Every new category should preserve the same hierarchical documentation philosophy.
+This order ensures that implementation decisions remain consistent with the project's philosophy.
 
 ---
 
 # Documentation Principles
 
-Documentation should answer
+Documentation should answer the following questions in order.
 
 1. Why?
 2. What?
-3. Where?
-4. How?
+3. How?
+4. Where?
 
-in that order.
+Implementation should never appear before architectural reasoning.
 
-Implementation details should never appear before the architectural reasoning.
+Architecture should never contradict the Foundation Documentation.
+
+Project Templates should never contradict the Architecture Documentation.
+
+---
+
+# Documentation Ownership
+
+The ownership of documentation is intentionally separated.
+
+| Documentation | Owner |
+|---------------|------|
+| Foundation | Project Philosophy |
+| Architecture | Public Platform |
+| Project Templates | PBL Repository |
+| Runtime Design | Private Runtime Repository |
+| Reflection Analysis | InnerMirror Runtime |
+
+This separation preserves clear repository boundaries.
 
 ---
 
@@ -254,8 +339,10 @@ Implementation details should never appear before the architectural reasoning.
 
 Documentation is part of the architecture.
 
-Good documentation preserves decisions.
+Good documentation preserves architectural decisions.
 
-Good architecture preserves knowledge.
+Good architecture preserves development consistency.
 
-Together they allow the Fribot ecosystem to evolve without losing its original vision.
+Consistent development creates maintainable software.
+
+Maintainable software enables long-term learning.
