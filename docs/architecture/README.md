@@ -1,25 +1,30 @@
 # Architecture Documentation
 
-The Architecture Documentation describes how the Fribot ecosystem is designed and implemented.
+The Architecture Documentation defines **how** the Fribot Learning repository is organized and how the public PBL platform is implemented.
 
-While the Foundation Documentation explains **why** the project exists and **what** principles guide development, the Architecture Documentation explains **how** those principles are realized in software.
+While the Foundation Documentation explains **why** the project exists and **which principles guide development**, the Architecture Documentation explains **how those principles are realized in software**.
+
+This directory describes only the architecture that belongs to the public `fribot-learning` repository.
+
+Private Runtime implementation belongs to the InnerMirror Runtime repository.
 
 ---
 
 # Purpose
 
-This directory contains the technical architecture of the Fribot ecosystem.
+This directory contains the public technical architecture of the Fribot Learning platform.
 
 Architecture documents describe:
 
-- system design
-- runtime structure
-- data flow
-- API boundaries
-- security architecture
-- implementation patterns
+- repository structure
+- project template architecture
+- repository boundaries
+- service boundaries
+- public data flow
+- implementation strategy
+- public integration points
 
-Unlike the Foundation Documentation, architecture documents are expected to evolve as the system grows.
+Unlike the Foundation Documentation, Architecture Documentation evolves as implementation progresses.
 
 ---
 
@@ -27,7 +32,7 @@ Unlike the Foundation Documentation, architecture documents are expected to evol
 
 The documentation hierarchy is intentionally structured.
 
-```
+```text
 Foundation
 
 ↓
@@ -36,7 +41,7 @@ Architecture
 
 ↓
 
-Roadmap
+Project Templates
 
 ↓
 
@@ -47,164 +52,356 @@ Implementation
 Pull Requests
 ```
 
-Foundation documents define permanent principles.
+The responsibility of each layer is different.
 
-Architecture documents describe technical realization.
+### Foundation
 
-Implementation should never contradict the Foundation Documentation.
+Defines permanent philosophy and development principles.
+
+Examples:
+
+- Why the project exists
+- Development philosophy
+- Repository roles
+- Long-term principles
+
+Foundation documents change rarely.
 
 ---
 
-# Current Architecture
+### Architecture
 
-The current MVP architecture consists of four major layers.
+Defines how the philosophy is implemented.
+
+Examples:
+
+- repository structure
+- project architecture
+- public integration
+- technical boundaries
+
+Architecture documents evolve together with implementation.
+
+---
+
+### Project Templates
+
+Define learner-facing project experiences.
+
+Examples:
+
+- Class Concept Robot
+- Tandem Dual MCU
+
+Each template follows the common architecture defined here.
+
+---
+
+### Implementation
+
+Implementation follows the Architecture.
+
+Implementation should never redefine architecture.
+
+---
+
+### Pull Requests
+
+Every implementation change should trace back to:
+
+```text
+Foundation
+
+↓
+
+Architecture
+
+↓
+
+Project Template
+
+↓
+
+Implementation
+```
+
+---
+
+# Current MVP Architecture
+
+The current MVP intentionally keeps the architecture small.
+
+The learner experiences the following flow.
 
 ```text
 Learner
 
 ↓
 
-Fribot Learning
+PBL Project
 
 ↓
 
-GitHub Workflow
+Practical Experience
 
 ↓
 
-InnerMirror Runtime
+GitHub (Optional)
 
 ↓
 
-Growth Portfolio
+InnerMirror Reflection
+
+↓
+
+Reflection Insight
 ```
 
-Responsibilities are intentionally separated between public and private repositories.
+The MVP does **not** attempt to implement a complete learning management platform.
+
+Its purpose is to validate whether project-based experiences naturally produce more meaningful Reflection.
 
 ---
 
 # Public Layer
 
-Purpose
+## Purpose
 
-Provide the learning experience.
+Provide learner-facing project experiences.
 
-Repositories
+## Repositories
 
-- fribot-learning
-- innermirror-landing
+- `fribot-learning`
+- `innermirror-landing`
 
-Responsibilities
+## Responsibilities
 
-- project management
+### `fribot-learning`
+
+Owns:
+
+- public project templates
 - learning workflow
-- user interface
-- GitHub integration
-- coaching visualization
+- starter projects
+- educational references
+- project documentation
 
-The public layer never performs decision intelligence.
+Does not own:
+
+- Reflection analysis
+- Runtime intelligence
+- learner memory
+- AI coaching
+- recommendation engines
+
+---
+
+### `innermirror-landing`
+
+Owns:
+
+- Reflection UI
+- user interaction
+- Reflection submission
+- Runtime result visualization
+
+Does not own:
+
+- private Reflection analysis
+- decision intelligence
+- learner memory
 
 ---
 
 # Private Layer
 
-Purpose
+## Purpose
 
-Process cognitive learning data.
+Analyze Reflection and generate insights.
 
-Repositories
+## Repository
 
-- innermirror-runtime-private
+- `innermirror-runtime-private`
 
-Responsibilities
+## Responsibilities
 
 - Reflection analysis
-- GitHub Snapshot analysis
-- Continuity Intelligence
-- Decision Review
-- PBL Coaching
-- Runtime orchestration
+- summary generation
+- pacing guidance
+- continuity analysis
+- next-question generation
 
-Private Runtime is the only component allowed to process decision intelligence.
+The Runtime analyzes only Reflection content.
+
+The Runtime does not receive project-specific context during the MVP.
+
+---
+
+# Project Template Architecture
+
+The learner-facing architecture is based on reusable project templates.
+
+Every project follows the same progression.
+
+```text
+Start
+
+↓
+
+Run
+
+↓
+
+Modify
+
+↓
+
+Understand
+
+↓
+
+Reflect
+```
+
+Projects differ in technical content.
+
+They should not differ in learning structure.
+
+The common template is defined in:
+
+- [Project Template Architecture](./PROJECT_TEMPLATE_ARCHITECTURE.md)
+
+Learner-facing projects are located under:
+
+- [PBL Projects](../../projects/)
+
+The reusable authoring template is located under:
+
+- [Project Authoring Template](../../templates/project-template/)
 
 ---
 
 # Architectural Principles
 
-The architecture follows several fundamental principles.
+The public architecture follows the following principles.
 
-- Single Responsibility
 - Repository Separation
-- Runtime Independence
+- Single Responsibility
+- InnerMirror First
+- Template First
+- Reflection Independence
+- UI Context Only
+- Minimal Coupling
 - Security by Design
-- Project-Based Learning
-- Manual GitHub Synchronization (MVP)
+- Optional GitHub Integration (MVP)
 
-These principles are defined in the Foundation Documentation.
+These principles originate from the Foundation Documentation.
+
+Relevant Foundation documents:
+
+- [Foundation Documentation](../foundation/)
+- [Foundation Philosophy](../foundation/01_FOUNDATION_PHILOSOPHY.md)
+- [Repository Architecture](../foundation/02_REPOSITORY_ARCHITECTURE.md)
+- [Development Principles](../foundation/03_DEVELOPMENT_PRINCIPLES.md)
+- [Repository Roles](../foundation/04_REPOSITORY_ROLES.md)
 
 ---
 
-# Planned Architecture Documents
+# Architecture Documents
 
-As development progresses, this directory will include documents such as:
+Each document in this directory focuses on one architectural concern.
 
-```
+| Document | Responsibility |
+|---|---|
+| [Repository Boundary](./REPOSITORY_BOUNDARY.md) | Defines ownership and responsibility boundaries for `fribot-learning` |
+| [Cross-Repository Boundary](./CROSS_REPOSITORY_BOUNDARY.md) | Defines interaction boundaries between repositories |
+| [Cross-Repository Governance](./CROSS_REPOSITORY_GOVERNANCE.md) | Defines governance rules across repositories |
+| [Service Data Flow](./SERVICE_DATA_FLOW.md) | Defines the public service and data flow |
+| [Service Responsibility Matrix](./SERVICE_RESPONSIBILITY_MATRIX.md) | Defines responsibility allocation across services |
+| [Project Template Architecture](./PROJECT_TEMPLATE_ARCHITECTURE.md) | Defines the common learner-facing project structure |
+
+---
+
+# Documentation Structure
+
+This directory currently contains:
+
+```text
 architecture/
 
 README.md
 
-SYSTEM_ARCHITECTURE.md
+REPOSITORY_BOUNDARY.md
 
-RUNTIME_ARCHITECTURE.md
+CROSS_REPOSITORY_BOUNDARY.md
 
-DATA_FLOW.md
+CROSS_REPOSITORY_GOVERNANCE.md
 
-API_ARCHITECTURE.md
+SERVICE_DATA_FLOW.md
 
-DATABASE_ARCHITECTURE.md
+SERVICE_RESPONSIBILITY_MATRIX.md
 
-SECURITY_ARCHITECTURE.md
-
-MEMORY_ARCHITECTURE.md
-
-PORTFOLIO_ARCHITECTURE.md
+PROJECT_TEMPLATE_ARCHITECTURE.md
 ```
 
-Each document should focus on one architectural concern.
+For the complete documentation navigation map, see:
+
+- [Documentation Index](../INDEX.md)
+
+For the documentation overview, see:
+
+- [Documentation README](../README.md)
 
 ---
 
 # Documentation Scope
 
-Architecture documents describe:
+Architecture Documentation should describe:
 
-- component relationships
+- repository responsibilities
 - service boundaries
-- technical responsibilities
+- public technical architecture
+- project template architecture
 - implementation strategy
 
-Architecture documents should avoid:
+Architecture Documentation should avoid:
 
 - educational philosophy
-- roadmap planning
 - release history
+- learner Reflection
+- AI Runtime implementation
+- private algorithms
 
-Those topics belong to other documentation categories.
+Those topics belong to other repositories or documentation layers.
 
 ---
 
 # Evolution Policy
 
-Architecture is expected to evolve.
+Architecture evolves through implementation.
 
-However, architectural changes should always preserve:
+However, every architectural change should preserve:
 
 - Foundation Philosophy
 - Repository Boundaries
+- InnerMirror First
+- Reflection Independence
 - Runtime Independence
 - Security Principles
 
-Major architectural changes should be documented before implementation.
+Large architectural changes should be documented before implementation begins.
+
+Changes to learner-facing project content do not require an architecture update when they preserve the common project structure.
+
+Architecture review is required when a change introduces:
+
+- a different project lifecycle
+- mandatory GitHub integration
+- direct Runtime communication
+- a new Reflection data type
+- private analysis logic in the public repository
+- a new learner state database
+- a new authentication dependency
 
 ---
 
@@ -214,11 +411,30 @@ Good architecture creates clear responsibilities.
 
 Clear responsibilities create maintainable software.
 
-Maintainable software enables long-term learning.
+Maintainable software enables reusable learning experiences.
 
-The Architecture Documentation exists to preserve those responsibilities as the Fribot ecosystem evolves.
+Reusable learning experiences naturally lead to meaningful Reflection.
+
+The Architecture Documentation exists to preserve those responsibilities as the Fribot Learning platform evolves.
 
 ---
 
-This repository documents the ecosystem architecture but does not implement the private runtime.
-Runtime implementation belongs to innermirror-runtime-private.
+# Repository Boundary
+
+This repository documents and implements the public PBL platform.
+
+It does **not** implement:
+
+- private Runtime
+- Reflection analysis
+- decision intelligence
+- learner memory
+- AI recommendation logic
+
+Those responsibilities belong to:
+
+```text
+innermirror-runtime-private
+```
+
+The public repository should remain focused on learner-facing project experiences.
