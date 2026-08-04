@@ -1,14 +1,19 @@
 # Documentation Index
 
-This document provides the complete navigation map for the Fribot Learning documentation.
-
-The documentation is intentionally organized so that both developers and AI assistants can quickly understand:
-
-- where information belongs,
-- why it exists,
-- and how each document relates to implementation.
-
-The goal is consistency rather than documentation volume.
+> **Documentation Navigation**
+>
+> This document provides the complete navigation map for the
+> `fribot-learning` repository.
+>
+> The documentation is intentionally organized so that both developers and AI
+> assistants can quickly understand:
+>
+> - where information belongs,
+> - why it exists,
+> - how it relates to other documentation,
+> - and how constitutional principles become learner-facing projects.
+>
+> The objective is long-term consistency rather than documentation volume.
 
 ---
 
@@ -19,6 +24,12 @@ docs/
 
 ├── README.md
 ├── INDEX.md
+│
+├── constitution/
+│   ├── README.md
+│   ├── CONSTITUTION_REFERENCE.md
+│   ├── LEARNING_CONTENT_STANDARD.md
+│   └── CONSTITUTIONAL_REVIEW_CHECKLIST.md
 │
 ├── foundation/
 │   ├── README.md
@@ -43,21 +54,33 @@ docs/
 
 ---
 
-# Documentation Layers
+# Documentation Architecture
 
-The documentation is organized into five primary responsibility layers,
-with Roadmap Documentation controlling implementation order.
+The documentation hierarchy intentionally mirrors the constitutional
+architecture of the ecosystem.
 
 ```text
-Foundation
+Learning Constitution
 
 ↓
 
-Architecture
+Constitution Documentation
+
+↓
+
+Foundation Documentation
+
+↓
+
+Architecture Documentation
 
 ↓
 
 Project Templates
+
+↓
+
+Learner-Facing Projects
 
 ↓
 
@@ -70,13 +93,46 @@ Pull Requests
 
 Each layer answers a different question.
 
-| Layer | Question |
-|--------|----------|
-| Foundation | Why does the project exist? |
-| Architecture | How is the system organized? |
-| Project Templates | How does the learner experience the project? |
-| Implementation | How is the feature implemented? |
+| Layer | Primary Question |
+|--------|------------------|
+| Constitution | Why should learning be designed this way? |
+| Foundation | How should this repository think and evolve? |
+| Architecture | How are responsibilities implemented? |
+| Project Templates | How should projects be structured? |
+| Projects | What does the learner experience? |
+| Implementation | How is the feature built? |
 | Pull Requests | How did the implementation evolve? |
+
+---
+
+# Constitution Documentation
+
+## Purpose
+
+Constitution Documentation connects the repository to the
+`innermirror-constitution` repository.
+
+It explains:
+
+- constitutional authority,
+- learning content standards,
+- repository implementation,
+- constitutional review.
+
+These documents never replace the Constitution.
+
+They implement it.
+
+---
+
+## Documents
+
+| Document | Purpose |
+|----------|---------|
+| README.md | Constitution documentation overview |
+| CONSTITUTION_REFERENCE.md | Repository relationship with the Constitution |
+| LEARNING_CONTENT_STANDARD.md | Official learner-facing content standard |
+| CONSTITUTIONAL_REVIEW_CHECKLIST.md | Constitutional review before merge |
 
 ---
 
@@ -84,47 +140,16 @@ Each layer answers a different question.
 
 ## Purpose
 
-Defines the permanent philosophy of the Fribot ecosystem.
+Defines the long-term identity of the repository.
 
-Foundation documents describe:
+Topics include:
 
 - educational philosophy,
-- repository roles,
 - development principles,
-- long-term architectural direction.
+- repository responsibilities,
+- long-term evolution.
 
-Foundation documents should change very rarely.
-
----
-
-## Documents
-
-| Document | Purpose |
-|----------|---------|
-| 01_FOUNDATION_PHILOSOPHY.md | Vision, mission, educational philosophy |
-| 02_REPOSITORY_ARCHITECTURE.md | Repository architecture and boundaries |
-| 03_DEVELOPMENT_PRINCIPLES.md | Development principles |
-| 04_REPOSITORY_ROLES.md | Repository responsibilities |
-
----
-
-## Recommended Reading Order
-
-```text
-01
-
-↓
-
-02
-
-↓
-
-03
-
-↓
-
-04
-```
+Foundation documents are intentionally stable.
 
 ---
 
@@ -132,30 +157,19 @@ Foundation documents should change very rarely.
 
 ## Purpose
 
-Defines how the philosophy is implemented.
+Defines how Foundation principles become repository structure.
 
-Architecture documents describe:
+Topics include:
 
 - repository boundaries,
-- service boundaries,
+- service architecture,
 - project template architecture,
-- public implementation structure,
-- integration strategy.
+- contracts,
+- public integration,
+- implementation strategy.
 
-Architecture documents evolve together with implementation.
-
----
-
-## Documents
-
-| Document | Purpose |
-|----------|---------|
-| REPOSITORY_BOUNDARY.md | Repository ownership |
-| CROSS_REPOSITORY_BOUNDARY.md | Repository interaction |
-| CROSS_REPOSITORY_GOVERNANCE.md | Governance rules |
-| SERVICE_DATA_FLOW.md | Public service flow |
-| SERVICE_RESPONSIBILITY_MATRIX.md | Responsibility allocation |
-| PROJECT_TEMPLATE_ARCHITECTURE.md | Common learner-facing project structure |
+Architecture evolves with implementation while remaining aligned with the
+Constitution and Foundation.
 
 ---
 
@@ -163,31 +177,24 @@ Architecture documents evolve together with implementation.
 
 ## Purpose
 
-Defines what will be implemented.
+Defines implementation order.
 
-Roadmap documents are expected to evolve continuously.
+Roadmaps describe:
 
-Current documents:
+- implementation phases,
+- release planning,
+- MVP sequencing,
+- future development.
 
-| Document | Purpose |
-|----------|---------|
-| PBL_MVP_MASTER_PLAN.md | MVP implementation roadmap |
+Roadmaps may change frequently.
 
-Future roadmap documents may include:
-
-- Release Plan
-- Feature Roadmap
-- Phase Planning
-
-Roadmap documents describe future implementation.
-
-They do not redefine architecture.
+They never redefine Architecture or Foundation.
 
 ---
 
 # Repository Relationship
 
-The Fribot ecosystem currently consists of multiple repositories.
+The current ecosystem is:
 
 ```text
 fribot-learning
@@ -201,38 +208,44 @@ innermirror-landing
 innermirror-runtime-private
 ```
 
-Each repository owns different responsibilities.
-
-The documentation in this repository defines only the public PBL platform.
-
-Private Runtime implementation belongs to:
+Supporting repositories include:
 
 ```text
-innermirror-runtime-private
+innermirror-engine-private
+
+fribot-flow-timeline
 ```
+
+This repository documents only the public Learning layer.
+
+Private Runtime implementation belongs elsewhere.
 
 ---
 
-# Document Stability
+# Documentation Stability
 
 | Category | Expected Stability |
 |----------|--------------------|
+| Constitution | Extremely Stable |
 | Foundation | Very Stable |
 | Architecture | Stable |
 | Roadmap | Frequently Updated |
 | Project Templates | Frequently Updated |
+| Projects | Continuously Improved |
 | Pull Requests | Historical |
 
 ---
 
-# Reading Guide
+# Recommended Reading Order
 
 ## New Contributors
 
-Recommended reading order:
-
 ```text
 README
+
+↓
+
+Constitution
 
 ↓
 
@@ -248,6 +261,10 @@ Roadmap
 
 ↓
 
+Project Templates
+
+↓
+
 Implementation
 ```
 
@@ -255,26 +272,28 @@ Implementation
 
 ## Project Authors
 
-Read first:
+Recommended reading:
 
-- Foundation Documentation
-- Development Principles
-- Project Template Architecture
+1. Constitution Documentation
+2. Foundation Documentation
+3. Development Principles
+4. Project Template Architecture
 
-before creating a new learner-facing project.
+before creating a new Starter Project.
 
 ---
 
 ## Developers
 
-Read first:
+Recommended reading:
 
-- Repository Architecture
-- Repository Boundary
-- Service Data Flow
-- Project Template Architecture
+1. Repository Roles
+2. Repository Boundary
+3. Cross Repository Boundary
+4. Service Responsibility Matrix
+5. Project Template Architecture
 
-before implementing new features.
+before implementing a feature.
 
 ---
 
@@ -283,6 +302,10 @@ before implementing new features.
 Recommended context loading order:
 
 ```text
+Constitution
+
+↓
+
 Foundation
 
 ↓
@@ -298,51 +321,63 @@ Roadmap
 Current Pull Request
 ```
 
-This order ensures that implementation decisions remain consistent with the project's philosophy.
+This order minimizes architectural drift and keeps implementation aligned
+with constitutional principles.
 
 ---
 
 # Documentation Principles
 
-Documentation should answer the following questions in order.
+Documentation should answer questions in the following order.
 
-1. Why?
-2. What?
-3. How?
-4. Where?
+```text
+Why?
 
-Implementation should never appear before architectural reasoning.
+↓
 
-Architecture should never contradict the Foundation Documentation.
+What?
 
-Project Templates should never contradict the Architecture Documentation.
+↓
+
+How?
+
+↓
+
+Where?
+
+↓
+
+Implement
+```
+
+Lower documentation layers should never silently redefine higher layers.
 
 ---
 
 # Documentation Ownership
 
-The ownership of documentation is intentionally separated.
-
-| Documentation | Owner |
-|---------------|------|
-| Foundation | Project Philosophy |
-| Architecture | Public Platform |
-| Project Templates | PBL Repository |
-| Runtime Design | Private Runtime Repository |
-| Reflection Analysis | InnerMirror Runtime |
-
-This separation preserves clear repository boundaries.
+| Documentation | Primary Owner |
+|---------------|---------------|
+| Constitution | Constitutional implementation |
+| Foundation | Repository identity |
+| Architecture | Public platform architecture |
+| Project Templates | Learner-facing structure |
+| Runtime Design | InnerMirror Runtime |
+| Reflection Analysis | Private Runtime |
 
 ---
 
 # Foundation Principle
 
-Documentation is part of the architecture.
+The Constitution protects purpose.
 
-Good documentation preserves architectural decisions.
+Foundation protects repository identity.
 
-Good architecture preserves development consistency.
+Architecture protects responsibility.
 
-Consistent development creates maintainable software.
+Project Templates protect learner experience.
 
-Maintainable software enables long-term learning.
+Implementation creates working software.
+
+Together they preserve long-term educational consistency across the Fribot
+Learning ecosystem.
