@@ -1,85 +1,109 @@
-# BEFORE YOU CONTINUE
+# Before You Continue
 
 > Project: Tandem Dual MCU  
-> Starter Project: 01 Basic Tandem Drive
+> Starter Project: 01 — Program-Generated Commands  
+> Difficulty: Beginner  
+> Purpose: Recognize what changed in your understanding before continuing.
 
 ---
 
 # Purpose
 
-Congratulations.
+The prepared movement sequence is complete.
 
-Your robot has completed its first Tandem Dual MCU demonstration.
+Before moving to the next Starter Project, pause briefly.
 
-Before moving to the next stage,
+Do not ask only:
 
-pause for a moment.
+> Did the robot work?
 
-Do **not** ask:
+Ask instead:
 
-> "Did the robot work?"
+> **What do I understand now that I did not understand before?**
 
-Instead ask:
+This document is not an examination.
 
-> **"What do I understand now that I did not understand before?"**
+It does not grade your performance.
 
-The goal of this document is not evaluation.
+It helps you notice whether the project changed how you understand:
 
-The goal is awareness.
+- commands,
+- processors,
+- communication,
+- hardware execution,
+- and system responsibility.
+
+The goal is awareness rather than evaluation.
+
+---
+
+# Learning Position
+
+This project established the first command-source baseline.
+
+```text
+01 — Program-Generated Commands
+
+The program generates the command.
+```
+
+The complete Tandem sequence will later compare:
+
+```text
+Program-Generated Commands
+
+↓
+
+User-Generated Commands
+
+↓
+
+Environment-Generated Commands
+```
+
+Before continuing, make sure the first form is visible enough to become a
+meaningful comparison point.
 
 ---
 
 # Step 1 — Experience Check
 
-Confirm your own experience.
+Confirm what you actually experienced.
 
-- [ ] I prepared the Arduino Runtime.
-- [ ] I prepared the micro:bit program.
-- [ ] I successfully downloaded the program.
-- [ ] I watched the complete movement sequence.
-- [ ] I compared the expected behavior with the actual behavior.
+- [ ] I prepared or verified the shared Arduino Runtime.
+- [ ] I prepared the micro:bit project files.
+- [ ] I downloaded `main.py` to the micro:bit.
+- [ ] I observed the complete movement sequence.
+- [ ] I observed the micro:bit display sequence.
+- [ ] I compared expected behaviour with actual behaviour.
+- [ ] I identified at least one element that changed.
+- [ ] I identified at least one element that remained stable.
 
-If any item is unchecked,
-
-repeat the project before continuing.
-
----
-
-# Step 2 — Observation Check
-
-Did you actually observe,
-
-or did you only watch?
-
-Consider the following.
-
-## Can you answer these questions?
-
-Without looking at the code:
-
-- Which controller generated the movement command?
-- Which controller controlled the servo?
-- Which controller directly moved the wheels?
-
-If you hesitate,
-
-repeat the experiment.
-
-The answer is more important than memorizing the code.
-
----
-
-# Step 3 — Comparison Check
-
-One of the most important learning activities is comparison.
-
-Complete the following.
-
-## Before the project
-
-I believed:
+If the project did not complete, use:
 
 ```text
+TROUBLESHOOTING.md
+```
+
+before attempting to interpret the architecture.
+
+A failed or incomplete run may still produce useful observations.
+
+However, make sure you understand what actually happened before continuing.
+
+---
+
+# Step 2 — Prediction Check
+
+Return to the prediction you made before running the robot.
+
+## Before Running
+
+What did you expect?
+
+```text
+____________________________________
+
 ____________________________________
 
 ____________________________________
@@ -87,11 +111,13 @@ ____________________________________
 
 ---
 
-## After the project
+## After Running
 
-Now I understand:
+What actually happened?
 
 ```text
+____________________________________
+
 ____________________________________
 
 ____________________________________
@@ -99,7 +125,9 @@ ____________________________________
 
 ---
 
-## The biggest difference
+## The Most Important Difference
+
+What was different between your expectation and reality?
 
 ```text
 ____________________________________
@@ -107,228 +135,671 @@ ____________________________________
 ____________________________________
 ```
 
-Do not skip this step.
+Do not judge the prediction as good or bad.
 
-Learning becomes meaningful when change becomes visible.
-
----
-
-# Step 4 — Troubleshooting Check
-
-Suppose the robot suddenly stopped moving.
-
-What would you check first?
-
-Choose your own order.
-
-```text
-____ Power
-
-____ Hardware
-
-____ Arduino Runtime
-
-____ micro:bit Program
-
-____ Communication
-
-____ Robot Behaviour
-```
-
-Now compare your answer with the troubleshooting guide.
-
-Did your investigation order change?
+The difference is the learning material.
 
 ---
 
-# Step 5 — Architectural Check
+# Step 3 — Observation Check
 
-Without opening the source code,
+Watching movement is not the same as observing a system.
 
-complete the following diagram.
+Without looking at the code, consider the following questions.
+
+## Command Source
+
+Where did the movement command originate?
 
 ```text
-micro:bit
-
-↓
-
-_____________
-
-↓
-
-Arduino Runtime
-
-↓
-
-_____________
-
-↓
-
-Robot Movement
+____________________________________
 ```
 
-If you cannot complete it,
+---
 
-review:
+## Command Execution
+
+Which controller converted the command into wheel-servo action?
+
+```text
+____________________________________
+```
+
+---
+
+## Physical Movement
+
+Which components produced the final physical movement?
+
+```text
+____________________________________
+```
+
+---
+
+## Responsibility Separation
+
+Did both processors perform the same responsibility?
+
+```text
+____________________________________
+
+____________________________________
+```
+
+If these relationships remain unclear, review:
 
 ```text
 WHY_IT_WORKS.md
 ```
 
----
+You do not need advanced terminology.
 
-# Step 6 — Responsibility Check
-
-Complete the sentences.
+You should be able to describe the relationship in your own words.
 
 ---
 
-The micro:bit is mainly responsible for:
+# Step 4 — Command Flow Check
+
+Complete the command path.
 
 ```text
-____________________________________
-```
-
----
-
-The Arduino Runtime is mainly responsible for:
-
-```text
-____________________________________
-```
-
----
-
-The robot hardware is responsible for:
-
-```text
-____________________________________
-```
-
----
-
-# Step 7 — Engineering Thinking Check
-
-Think about your debugging process.
-
-Did you immediately change the code?
-
-Or did you investigate the system first?
-
-Circle one.
-
-```text
-Code First
-
-or
-
-Observation First
-```
-
-The second answer reflects the engineering mindset this project is designed to develop.
-
----
-
-# Step 8 — Reflection Readiness
-
-You are ready to continue when the following statements feel true.
-
-- [ ] I understand more than I did before.
-- [ ] I can explain why the robot moved.
-- [ ] I can distinguish command generation from hardware execution.
-- [ ] I know how to begin debugging.
-- [ ] I understand that different responsibilities belong to different parts of the system.
-
----
-
-# One Final Question
-
-Imagine that the robot behaved differently from what you expected.
-
-Which became more valuable?
-
-```text
-The Answer
-
-or
-
-The Difference
-```
-
-There is no correct choice.
-
-Think carefully.
-
-Many engineers eventually discover that the difference teaches more than the answer.
-
----
-
-# Looking Ahead
-
-The next project introduces a new idea.
-
-Until now,
-
-the robot followed a prepared sequence.
-
-In the next stage,
-
-**you** will begin creating the commands.
-
-```text
-Prepared Sequence
+microbit/main.py
 
 ↓
 
-User Input
+____________________________
 
 ↓
 
-Decision
+I2C Communication
+
+↓
+
+____________________________
+
+↓
+
+Continuous-Rotation Servos
 
 ↓
 
 Robot Movement
 ```
 
-The architecture remains the same.
+Suggested terms are available in `WHY_IT_WORKS.md`.
 
-Only one responsibility changes.
-
-Observe carefully which one.
+Try to complete the diagram from understanding rather than memorization.
 
 ---
 
-# Ready?
+# Step 5 — Responsibility Check
 
-If you can honestly answer:
+Complete each statement in your own words.
 
-> "I understand why the robot moved,
+## `main.py` Is Mainly Responsible For
 
-not only that it moved."
+```text
+____________________________________
 
-then you are ready to continue.
+____________________________________
+```
+
+---
+
+## `microbit_abot.py` Is Mainly Responsible For
+
+```text
+____________________________________
+
+____________________________________
+```
+
+---
+
+## I2C Communication Is Mainly Responsible For
+
+```text
+____________________________________
+
+____________________________________
+```
+
+---
+
+## The Arduino Runtime Is Mainly Responsible For
+
+```text
+____________________________________
+
+____________________________________
+```
+
+---
+
+## The Servo Hardware Is Mainly Responsible For
+
+```text
+____________________________________
+
+____________________________________
+```
+
+The purpose is not to find perfect wording.
+
+The purpose is to avoid treating the entire robot as one invisible block.
+
+---
+
+# Step 6 — What Changed?
+
+During the prepared sequence, several things changed.
+
+Possible examples include:
+
+- the movement command,
+- the micro:bit display,
+- wheel direction,
+- robot movement,
+- the current stage of the program.
+
+Write what you observed.
+
+```text
+____________________________________
+
+____________________________________
+
+____________________________________
+```
+
+Then complete:
+
+```text
+When the command changed,
+
+____________________________________ changed.
+```
+
+---
+
+# Step 7 — What Remained the Same?
+
+Although the movement changed, important parts of the system remained stable.
+
+Possible examples include:
+
+- the robot platform,
+- the Arduino,
+- the micro:bit,
+- the shared Arduino Runtime,
+- the communication path,
+- the division between command generation and hardware execution.
+
+Write what remained stable.
+
+```text
+____________________________________
+
+____________________________________
+
+____________________________________
+```
+
+Then complete:
+
+```text
+Even though the robot behaviour changed,
+
+____________________________________ remained the same.
+```
+
+Recognizing continuity is as important as recognizing change.
+
+---
+
+# Step 8 — Troubleshooting Check
+
+If something failed during the project, think about how you investigated it.
+
+## My First Reaction
+
+```text
+____________________________________
+```
+
+---
+
+## The First Layer I Checked
+
+```text
+____________________________________
+```
+
+---
+
+## My First Hypothesis
+
+```text
+____________________________________
+```
+
+---
+
+## The Actual Cause
+
+```text
+____________________________________
+```
+
+---
+
+## What I Would Check First Next Time
+
+```text
+____________________________________
+```
+
+Now consider:
+
+```text
+Did I immediately change the code?
+
+or
+
+Did I observe and locate the system layer first?
+```
+
+Troubleshooting is not only about restoring operation.
+
+It is an opportunity to compare a hypothesis with evidence.
+
+---
+
+# Step 9 — Engineering Thinking Check
+
+Consider the following pairs.
+
+Choose the approach you used most often.
+
+```text
+Guess First
+
+or
+
+Observe First
+```
+
+```text
+Change Many Things
+
+or
+
+Change One Thing
+```
+
+```text
+Search for an Answer
+
+or
+
+Locate the Responsibility
+```
+
+```text
+Ask Whether It Works
+
+or
+
+Ask Why It Behaves This Way
+```
+
+This is not a score.
+
+It is a record of your current working habit.
+
+Future projects may help that habit evolve.
+
+---
+
+# Step 10 — Understanding Check
+
+You may be ready to continue when you can explain the following in your own
+words.
+
+- [ ] The movement commands originated inside the program.
+- [ ] No button generated the commands in this project.
+- [ ] No sensor generated the commands in this project.
+- [ ] The micro:bit-side program selected the movement sequence.
+- [ ] Communication connected two independently running processors.
+- [ ] The Arduino Runtime executed hardware-specific servo operations.
+- [ ] The two processors owned different responsibilities.
+- [ ] Robot behaviour changed while the overall Tandem structure remained stable.
+- [ ] This project forms the baseline for later command-source comparisons.
+
+You do not need to feel that every technical detail is fully understood.
+
+You should understand the central relationship well enough to recognize what
+the next project changes.
+
+---
+
+# Step 11 — Explain It Simply
+
+Imagine explaining this project to someone who has not seen the code.
+
+Complete the sentence:
+
+```text
+The robot moved because the program ________________________________,
+
+the micro:bit-side library ________________________________________,
+
+the communication path ___________________________________________,
+
+and the Arduino Runtime __________________________________________.
+```
+
+Now explain the system in one short paragraph.
+
+```text
+____________________________________
+
+____________________________________
+
+____________________________________
+
+____________________________________
+```
+
+If your explanation focuses only on code syntax, return to the responsibility
+chain.
+
+The deeper objective is understanding relationships.
+
+---
+
+# Step 12 — One Architectural Question
+
+Suppose the Arduino Runtime were replaced by another implementation that
+accepted the same approved commands.
+
+Would `main.py` necessarily need to change?
+
+```text
+Yes
+
+No
+
+Not sure yet
+```
+
+Why?
+
+```text
+____________________________________
+
+____________________________________
+```
+
+You do not need a complete answer.
+
+The question introduces the relationship between:
+
+```text
+Stable Interface
+
+and
+
+Replaceable Implementation
+```
+
+This idea will become more meaningful in future projects.
+
+---
+
+# Step 13 — Prepare the Next Comparison
+
+The current project used commands already written into the program.
+
+The next project changes the command source.
+
+```text
+Current Project
+
+Program
+
+↓
+
+Command
+
+↓
+
+Robot
+```
+
+```text
+Next Project
+
+User
+
+↓
+
+Command
+
+↓
+
+Robot
+```
+
+Before opening the next project, predict what will change.
+
+## What Do You Expect to Change?
+
+```text
+____________________________________
+
+____________________________________
+```
+
+---
+
+## What Do You Expect to Remain the Same?
+
+```text
+____________________________________
+
+____________________________________
+```
+
+---
+
+## Which New Component or Event Will Generate the Command?
+
+```text
+____________________________________
+```
+
+This prediction creates the starting point for the next learning comparison.
+
+---
+
+# Reflection Readiness
+
+Reflection is optional.
+
+It should not be completed merely because the project folder has ended.
+
+Reflection becomes meaningful when you recognize a change such as:
+
+- an assumption became incomplete,
+- a hidden responsibility became visible,
+- communication became part of the architecture,
+- debugging became a process of reducing uncertainty,
+- stable structure became easier to distinguish from changing behaviour.
+
+Use the following questions only if they feel meaningful.
+
+```text
+What surprised me?
+
+Which expectation changed?
+
+Which responsibility became visible?
+
+What remained stable?
+
+What do I now understand differently?
+
+What question do I want to carry forward?
+```
+
+There is no correct Reflection.
+
+The learner owns the Reflection.
+
+Fribot Learning only creates the experience from which Reflection may emerge.
+
+---
+
+# Optional Reflection Draft
+
+If you choose to reflect, you may begin with:
+
+```text
+Before this project, I thought...
+
+After observing the robot, I noticed...
+
+The most important relationship I now see is...
+
+What still feels unresolved is...
+
+In the next project, I expect...
+```
+
+Write in your own language and structure.
+
+Do not copy a model conclusion.
+
+---
+
+# One Final Comparison
+
+At the beginning, the project may have appeared to be:
+
+```text
+Code
+
+↓
+
+Robot Movement
+```
+
+After completing it, the system may now appear more like:
+
+```text
+Program Intention
+
+↓
+
+Command Translation
+
+↓
+
+Communication
+
+↓
+
+Hardware Execution
+
+↓
+
+Physical Behaviour
+```
+
+What was added to your understanding?
+
+```text
+____________________________________
+
+____________________________________
+
+____________________________________
+```
+
+---
+
+# Ready to Continue?
+
+You are not required to master every detail.
+
+You are ready for the next Starter Project when you can reasonably say:
+
+> I understand that the program generated the command, while another part of
+> the system executed the physical movement.
+
+And:
+
+> I can identify what changed during the sequence and what remained stable.
 
 Proceed to:
 
 ```text
-02_button_command
+02_user_generated_commands
 ```
+
+The next project will be more meaningful when you carry forward a clear
+prediction.
+
+---
+
+# Completion Check
+
+- [ ] I reviewed my original prediction.
+- [ ] I compared the prediction with actual behaviour.
+- [ ] I identified the command source.
+- [ ] I distinguished command generation from hardware execution.
+- [ ] I traced the command path through the system.
+- [ ] I identified what changed.
+- [ ] I identified what remained stable.
+- [ ] I reviewed my troubleshooting process where applicable.
+- [ ] I formed a prediction for the next project.
+- [ ] I understand that Reflection is optional and learner-owned.
 
 ---
 
 # Foundation Principle
 
-Do not continue because the robot worked.
+Do not continue merely because the robot worked.
 
-Continue because **your understanding changed.**
+Continue because the experience gave you something meaningful to compare.
 
-Projects do not exist to produce working robots.
+```text
+Expectation
 
-Projects exist to produce changing engineers.
+↓
 
-Every new stage should begin
+Reality
 
-only after the previous stage has changed
+↓
 
-how you think.
+Difference
+
+↓
+
+Changed Understanding
+```
+
+Projects do not exist only to produce working robots.
+
+They exist to create experiences through which learners can see systems more
+clearly.
+
+The robot may remain the same.
+
+The architecture may remain stable.
+
+The most important change may occur in how you understand them.
+
+That change is the beginning of the next project.
