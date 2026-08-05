@@ -1450,7 +1450,33 @@ InnerMirror accepts Reflection beyond Fribot Learning projects as well.
 
 # 29. Initial MVP Projects
 
-The MVP begins with two project families.
+The MVP currently begins with two project families.
+
+These projects are not independent demonstrations.
+
+Together they validate the first learner-facing architecture of Fribot
+Learning.
+
+The current validation status is:
+
+```text
+class-concept-robot
+
+↓
+
+In Development
+```
+
+```text
+tandem-dual-mcu
+
+↓
+
+Phase 1 Validated
+```
+
+The purpose of these projects is to validate the common Project Template
+Architecture before expanding the number of learner-facing projects.
 
 ---
 
@@ -1479,10 +1505,10 @@ State and Behavior Relationship
 
 ↓
 
-Reflection
+Optional Reflection
 ```
 
-The learner may eventually understand:
+The learner may gradually understand:
 
 - object,
 - state,
@@ -1496,17 +1522,24 @@ The learner may eventually understand:
 The learner should experience the structural difference before receiving a
 complete object-oriented explanation.
 
+This project is expected to follow the same constitutional learning structure
+validated by the Tandem project.
+
 The full educational content remains outside the scope of this architecture
-PR.
+document.
 
 ---
 
 ## 29.2 `tandem-dual-mcu`
 
-This project uses an Arduino and a micro:bit as cooperating controllers.
+The Tandem Dual MCU project is the first validated implementation of the
+Fribot Learning Project Template Architecture.
 
-Its current Starter Project sequence is organized by the source of the
-command.
+It uses an Arduino and a micro:bit as cooperating controllers while
+preserving one stable Tandem architecture.
+
+The current validated Starter Project sequence is organized by the source of
+the command.
 
 ```text
 01_program_generated_commands
@@ -1532,7 +1565,7 @@ The User Generates the Command
 The Environment Generates the Command
 ```
 
-The meaningful comparison is:
+The primary educational comparison is:
 
 ```text
 Program
@@ -1548,48 +1581,62 @@ Environment
 
 The command source changes.
 
-The core relationship remains stable.
+The core architecture remains stable.
 
 ```text
 Input Source
 
 ↓
 
-micro:bit Processing
+Interpretation
 
 ↓
 
-Message
+Movement Command
 
 ↓
 
-Arduino Execution
+microbit_abot.py
+
+↓
+
+I2C Communication
+
+↓
+
+Arduino Runtime
 
 ↓
 
 Robot Behavior
 ```
 
-The learner should gradually understand:
+Throughout Tandem Phase 1, learners gradually discover:
 
 - command source,
+- interpretation,
 - responsibility separation,
-- message passing,
-- independent controller roles,
 - communication,
+- independent controller roles,
 - coordinated behavior,
-- failure isolation,
 - structural continuity across changing inputs.
 
-The project should explicitly identify:
+Every Starter Project explicitly identifies:
 
 - what changes,
 - what remains the same,
 - what the learner should observe,
 - what comparison reveals the larger architecture.
 
+Starter Project 03 additionally demonstrates the optional use of a
+Reference Foundation by extending the micro:bit built-in light-sensor example
+into a complete environment-driven command architecture.
+
+The Tandem project therefore serves as the first validated reference
+implementation of the Fribot Learning Project Template Architecture.
+
 The full educational content remains outside the scope of this architecture
-PR.
+document.
 
 ---
 
@@ -1604,6 +1651,14 @@ Every stage or unit should answer:
 What Changes?
 
 What Remains the Same?
+
+Every validated Starter Project
+
+should clearly identify
+
+Command Source
+
+when applicable.
 ```
 
 This requirement helps the learner distinguish:
@@ -1644,36 +1699,67 @@ A new project may be added only when:
 
 # 32. New Project Authoring Rule
 
-A new project should begin by copying:
+During the MVP, new learner-facing projects should follow the validated
+Project Template Architecture.
+
+The Tandem Dual MCU project currently serves as the primary reference
+implementation.
+
+Rather than redesigning the learner experience, project authors should
+preserve the validated educational structure and adapt it to the new project.
+
+The author should then:
+
+1. define one concrete project goal,
+2. identify the meaningful learner experience,
+3. define at least one meaningful comparison,
+4. identify what changes,
+5. identify what remains the same,
+6. verify all required hardware and software,
+7. prepare executable Starter Project materials,
+8. preserve the constitutional learning flow,
 
 ```text
-templates/project-template/
+Predict
+
+↓
+
+Run
+
+↓
+
+Observe
+
+↓
+
+Compare
+
+↓
+
+Understand
+
+↓
+
+Optional Reflection
 ```
 
-into:
-
-```text
-projects/<project-id>/
-```
-
-The author must then:
-
-1. replace all placeholders,
-2. define one concrete project goal,
-3. identify the meaningful learner experience,
-4. define at least one meaningful comparison,
-5. define what changes,
-6. define what remains the same,
-7. verify all required hardware and software,
-8. prepare executable Starter Project materials,
-9. preserve the five-stage lifecycle,
-10. identify where expectation is formed,
-11. identify where reality is observed,
-12. place explanation after relevant experience,
-13. write one optional final Reflection question,
+9. identify where expectation is formed,
+10. identify where reality is observed,
+11. place explanation after relevant experience,
+12. include a `Reference Foundation` section when the project extends an
+    existing educational example,
+13. provide clear navigation to the previous and next learning stage where
+    applicable,
 14. verify all relative links,
 15. confirm that the project does not expose private Runtime behavior,
 16. review the project using the Constitutional Review Checklist.
+
+After multiple project families have been validated, a reusable
+`templates/project-template/` directory may be extracted from those validated
+projects.
+
+The MVP intentionally validates real learner projects before introducing a
+dedicated project template.
 
 ---
 
@@ -1962,6 +2048,11 @@ Before a Project Template Architecture PR is merged, verify:
 - [ ] No GitHub integration was made mandatory.
 - [ ] No learner database was added.
 - [ ] No automatic project-context transfer was introduced.
+- [ ] Project Position is clear.
+- [ ] Learning Order is clear.
+- [ ] Navigation links are valid.
+- [ ] Shared Runtime is documented.
+- [ ] Reference Foundation is documented if applicable.
 ```
 
 ---
@@ -2013,6 +2104,12 @@ Before a new learner-facing project is merged, verify:
 - [ ] Expected output is documented.
 - [ ] Troubleshooting guidance exists where necessary.
 - [ ] Completion criteria are observable.
+
+## Navigation
+
+- [ ] The learner knows where to begin.
+- [ ] The learner knows where to continue.
+- [ ] The learner knows when the project is complete.
 ```
 
 ---
