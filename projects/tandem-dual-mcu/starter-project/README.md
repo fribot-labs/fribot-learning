@@ -90,6 +90,16 @@ Each project uses the previous project as a comparison baseline.
 Meaningful understanding emerges through comparison rather than by skipping
 ahead.
 
+## Begin Here
+
+Complete the shared setup first.
+
+- [Open Shared Setup](./shared/)
+
+Then begin the first executable project.
+
+- [Start Project 01 — Program-Generated Commands](./01_program_generated_commands/README.md)
+
 ---
 
 # Before Starting
@@ -1030,3 +1040,15 @@ The purpose of Reflection is not to evaluate the project.
 
 It is to preserve what changed in your own understanding after completing
 the learning experience.
+
+## Optional Reflection
+
+If you would like to preserve how your understanding changed during Phase 1,
+you may continue to:
+
+The public InnerMirror link will be added when the MVP reflection entry is
+available.
+
+Reflection is optional.
+
+You may also stop here and return when you are ready.

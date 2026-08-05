@@ -1256,3 +1256,11 @@ Learning grows when the learner can see both the local change and the larger
 continuity.
 
 That understanding becomes the foundation for the next project.
+
+---
+
+# Next Project
+
+Continue to:
+
+- [Project 03 — Environment-Generated Commands](../03_environment_generated_commands/README.md)

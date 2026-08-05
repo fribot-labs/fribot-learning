@@ -1551,3 +1551,17 @@ Learning grows when the learner can see both local variation and structural
 continuity.
 
 That understanding is the real completion of Tandem Phase 1.
+
+---
+
+# Complete Tandem Phase 1
+
+Return to the Phase 1 completion guide:
+
+- [Review Phase 1 Completion](../README.md#phase-1-completion-check)
+
+Reflection remains optional.
+
+After reviewing completion, you may continue to:
+
+- [After Phase 1](../README.md#after-phase-1)

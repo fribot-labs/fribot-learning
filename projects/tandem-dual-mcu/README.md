@@ -357,6 +357,22 @@ Architectural explanation follows experience and comparison.
 
 ---
 
+# Start Tandem Phase 1
+
+Before opening an individual Starter Project, review the complete Phase 1
+navigation and shared setup.
+
+- [Open Tandem Phase 1 Starter Projects](./starter-project/README.md)
+
+The Starter Project guide explains:
+
+- what to prepare first,
+- why the projects should be completed in order,
+- how Project 01, 02, and 03 are compared,
+- and when Phase 1 is complete.
+
+---
+
 # MVP Learning Path
 
 Complete the Starter Projects in the recommended order.

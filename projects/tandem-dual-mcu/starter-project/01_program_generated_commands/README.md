@@ -214,6 +214,63 @@ Together they implement one complete learning experience.
 
 ---
 
+# Recommended Learning Path
+
+Follow the documents in this order.
+
+## 1 — Form Your Prediction
+
+Begin with:
+
+Open the prediction section first.
+
+Do not read the expected movement sequence until after writing your own
+prediction.
+
+- [Prediction and Expected Output](./EXPECTED_OUTPUT.md)
+
+Write your prediction before running the robot.
+
+---
+
+## 2 — Run the Project
+
+Open the executable program:
+
+- [microbit/main.py](./microbit/main.py)
+
+Download it to the micro:bit and observe the complete behaviour.
+
+---
+
+## 3 — Investigate Unexpected Behaviour
+
+Only when the result differs from your expectation, use:
+
+- [Troubleshooting Guide](./TROUBLESHOOTING.md)
+
+Do not change several parts of the system at once.
+
+---
+
+## 4 — Understand the Architecture
+
+After completing the experience, read:
+
+- [Why It Works](./WHY_IT_WORKS.md)
+
+Do not begin with this explanation.
+
+---
+
+## 5 — Prepare to Continue
+
+Before opening the next Starter Project, complete:
+
+- [Before You Continue](./BEFORE_YOU_CONTINUE.md)
+
+---
+
 # Learning Flow
 
 Unlike traditional programming tutorials, this project separates
