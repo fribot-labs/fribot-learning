@@ -1,5 +1,7 @@
 # 01 Program-Generated Commands
 
+[← Back to Tandem Starter Projects](../README.md)
+
 > Project: Tandem Dual MCU  
 > Starter Project: 01  
 > Difficulty: Beginner  
@@ -1118,9 +1120,7 @@ Robot
 
 Continue to:
 
-```text
-02_user_generated_commands
-```
+- [02 — User-Generated Commands](../02_user_generated_commands/)
 
 only after completing:
 
@@ -1179,3 +1179,9 @@ Its purpose is to help you see one system differently than you did before.
 
 Everything that follows in the Tandem Dual MCU course builds upon that first
 change in understanding.
+
+---
+
+Return to:
+
+- [Tandem Starter Projects](../README.md)
