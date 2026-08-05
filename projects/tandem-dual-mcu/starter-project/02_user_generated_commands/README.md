@@ -1,5 +1,7 @@
 # 02 User-Generated Commands
 
+[← Back to Tandem Starter Projects](../README.md)
+
 > Project: Tandem Dual MCU  
 > Starter Project: 02  
 > Difficulty: Beginner  
@@ -483,9 +485,7 @@ The architecture remains.
 
 Continue to:
 
-```text
-03_environment_generated_commands
-```
+- [03 — Environment-Generated Commands](../03_environment_generated_commands/)
 
 only after completing:
 
@@ -510,3 +510,9 @@ The architecture remains remarkably stable.
 Learning grows through comparing those changes.
 
 That is the purpose of this Starter Project.
+
+---
+
+Return to:
+
+- [Tandem Starter Projects](../README.md)
