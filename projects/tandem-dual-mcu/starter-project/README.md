@@ -240,6 +240,8 @@ The explanation is designed to follow experience and comparison.
 
 # Learning Order
 
+You are now ready to begin the first executable Starter Project.
+
 Complete the projects in the recommended order.
 
 1. [01 — Program-Generated Commands](./01_program_generated_commands/)
@@ -520,6 +522,40 @@ Each file owns one educational responsibility.
 # How to Use Each Starter Project
 
 Use the same sequence for every project.
+
+## Recommended Reading Order
+
+Each Starter Project uses the same document sequence.
+
+```text
+README
+
+↓
+
+EXPECTED_OUTPUT
+
+↓
+
+Run microbit/main.py
+
+↓
+
+TROUBLESHOOTING (if needed)
+
+↓
+
+WHY_IT_WORKS
+
+↓
+
+BEFORE_YOU_CONTINUE
+```
+
+The document order is part of the learning experience.
+
+Do not begin with the explanation.
+
+---
 
 ## Step 1 — Open `README.md`
 
@@ -986,6 +1022,9 @@ InnerMirror
 ```
 
 Reflection remains optional.
+
+If you would like to preserve how your understanding changed during Phase 1,
+you may continue your Reflection in InnerMirror.
 
 The purpose of Reflection is not to evaluate the project.
 
