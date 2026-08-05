@@ -53,26 +53,30 @@ Those responsibilities belong to other repositories within the Fribot ecosystem.
 
 # Learning Philosophy
 
-Every learner-facing project should guide the learner through one consistent experience.
+Every learner-facing project should guide the learner through one consistent constitutional learning experience.
 
 ```text
-Experience
+Predict
 
 ↓
 
-Execution
+Run
 
 ↓
 
-Modification
+Observe
 
 ↓
 
-Understanding
+Compare
 
 ↓
 
-Reflection
+Understand
+
+↓
+
+Optional Reflection
 ```
 
 The project itself is not the final objective.
@@ -83,25 +87,53 @@ Projects should therefore emphasize:
 
 - experience before explanation,
 - observation before abstraction,
+- meaningful comparison before conclusion,
 - understanding before memorization,
-- Reflection before evaluation.
+- creating the conditions from which Reflection may naturally emerge.
+
+Reflection remains optional throughout the MVP.
+
+Projects create the experience.
+
+Learners decide whether that experience becomes Reflection.
 
 ---
 
 # Common Project Structure
 
-Every learner-facing project follows the same minimum structure.
+Every learner-facing project follows one common constitutional learning
+architecture.
+
+The current MVP validates this architecture through executable Starter
+Projects.
+
+A typical Starter Project currently contains:
+
+```text
+starter-project/
+
+├── README.md
+├── EXPECTED_OUTPUT.md
+├── TROUBLESHOOTING.md
+├── WHY_IT_WORKS.md
+├── BEFORE_YOU_CONTINUE.md
+└── executable source files
+```
+
+The complete project lifecycle may later expand to include staged documents
+such as:
 
 ```text
 project-name/
-├─ README.md
-├─ 01_START.md
-├─ 02_RUN.md
-├─ 03_MODIFY.md
-├─ 04_UNDERSTAND.md
-├─ 05_REFLECT.md
-├─ starter-code/
-└─ references/
+
+├── README.md
+├── 01_START.md
+├── 02_RUN.md
+├── 03_MODIFY.md
+├── 04_UNDERSTAND.md
+├── 05_REFLECT.md
+├── starter-code/
+└── references/
 ```
 
 Projects may differ in:
@@ -112,179 +144,303 @@ Projects may differ in:
 - starter code,
 - reference materials.
 
-They should **not** differ in learner experience.
+They should **not** differ in learner experience or constitutional learning
+flow.
 
-The common architecture is defined in:
+The common learner-facing architecture is defined in:
 
 - [Project Template Architecture](../docs/architecture/PROJECT_TEMPLATE_ARCHITECTURE.md)
+
+The current architecture has been validated through the Tandem Dual MCU
+project.
+
+- [Tandem Dual MCU](./tandem-dual-mcu/)
+
+The Tandem Dual MCU project currently serves as the first validated
+learner-facing reference implementation of the Fribot Learning Project
+Architecture.
+
+Future learner-facing projects should preserve the same constitutional
+learning structure while introducing different engineering concepts and
+technical domains.
+
+A reusable Project Authoring Template will be extracted only after multiple
+learner-facing project families have been implemented and validated.
 
 ---
 
 # Common Learning Flow
 
-Every learner-facing project follows the same five stages.
+Every learner-facing project follows the same constitutional learning flow.
 
-## Stage 1 — Start
+```text
+Predict
 
-Understand:
+↓
 
-- what will be built,
-- required tools,
-- expected result,
-- first action.
+Run
 
----
+↓
 
-## Stage 2 — Run
+Observe
 
-Execute the prepared example.
+↓
 
-Confirm that the original project works.
+Compare
 
-Establish a reliable baseline.
+↓
 
----
+Understand
 
-## Stage 3 — Modify
+↓
 
-Make one controlled modification.
+Optional Reflection
+```
 
-Observe the resulting behavioral change.
-
-Compare the modified version with the original.
+The learner is encouraged to experience the project before receiving the full
+architectural explanation.
 
 ---
 
-## Stage 4 — Understand
+## Predict
 
-Connect practical experience with software structure.
+Before running the project, the learner forms an expectation.
 
-Begin understanding:
+Typical questions include:
+
+- What do I think will happen?
+- Which part of the system is responsible?
+- What should I observe?
+
+---
+
+## Run
+
+Execute the prepared Starter Project.
+
+The objective is to establish a working baseline rather than immediately
+modify the implementation.
+
+---
+
+## Observe
+
+Observe the actual behaviour.
+
+Focus on:
+
+- visible system behaviour,
+- hardware response,
+- communication,
+- execution order,
+- unexpected results.
+
+---
+
+## Compare
+
+Compare:
+
+- prediction and reality,
+- before and after,
+- what changed,
+- what remained the same.
+
+Meaningful comparison is the foundation of learning.
+
+---
+
+## Understand
+
+Connect the observed behaviour to the underlying software architecture.
+
+The learner gradually discovers:
 
 - state,
-- behavior,
+- behaviour,
 - responsibility,
+- communication,
 - relationships,
 - boundaries.
 
-The learner gradually moves beyond syntax toward software engineering thinking.
+Understanding emerges from comparison rather than memorization.
 
 ---
 
-## Stage 5 — Reflect
-
-Record how understanding changed.
+## Optional Reflection
 
 Reflection belongs to InnerMirror.
 
-Projects simply provide the opportunity to enter Reflection.
+Projects simply create the conditions from which Reflection may naturally
+emerge.
+
+Reflection remains optional throughout the MVP.
 
 ---
 
 # Current MVP Projects
 
-The MVP begins with two learner-facing projects.
+The current MVP validates one complete learner-facing project before
+expanding to additional project families.
 
 ---
 
-## 1. Class Concept Robot
+## Validated MVP Reference Project
 
-Project:
-
-- [Class Concept Robot](./class-concept-robot/)
-
-Purpose:
-
-Help beginners understand that a class is more than C++ syntax.
-
-The learner gradually discovers why related state and behavior are grouped together.
-
-The project begins with familiar procedural programming and naturally progresses toward object-oriented thinking.
-
-Status:
-
-```text
-Planned
-```
-
----
-
-## 2. Tandem Dual MCU
+### Tandem Dual MCU
 
 Project:
 
 - [Tandem Dual MCU](./tandem-dual-mcu/)
 
-Purpose:
+Status:
 
-Help learners understand role separation and collaboration between two microcontrollers.
+```text
+Validated MVP Reference Project
+```
 
-The project gradually introduces:
+Current validated learning unit:
 
-- independent execution,
+```text
+Tandem Phase 1
+
+↓
+
+Command Source Architecture
+```
+
+The learner gradually compares three different command sources.
+
+```text
+Program
+
+↓
+
+User
+
+↓
+
+Environment
+```
+
+while preserving one stable Tandem architecture.
+
+The project introduces:
+
+- command generation,
+- interpretation,
 - communication,
-- coordination,
 - responsibility separation,
-- collaboration.
+- coordinated execution,
+- structural continuity across changing inputs.
+
+The Tandem Dual MCU project currently serves as the first validated
+learner-facing reference implementation of the Fribot Learning Project
+Architecture.
+
+Future learner-facing projects should preserve the same constitutional
+learning structure while introducing different engineering concepts and
+technical domains.
+
+---
+
+## Planned Future Projects
+
+### Class Concept Robot
+
+Project:
+
+- [Class Concept Robot](./class-concept-robot/)
 
 Status:
 
 ```text
-Planned
+Planned (Post-MVP Content Expansion)
 ```
+
+Purpose:
+
+Help learners understand that a class represents more than C++ syntax.
+
+The project will gradually introduce:
+
+- state,
+- behaviour,
+- responsibility,
+- public interface,
+- private boundary,
+- why related state and behaviour are grouped together.
+
+The project is expected to follow the same validated constitutional learning
+structure established by the Tandem Dual MCU project.
+
+It is intentionally scheduled after the current MVP learner journey has been
+completed and validated.
 
 ---
 
 # Future Projects
 
-The MVP intentionally limits the number of maintained projects.
+The current MVP intentionally focuses on validating one complete learner
+journey before expanding the number of learner-facing projects.
 
-Initial target:
-
-```text
-2 Projects
-```
-
-Maximum MVP target:
+The current validated project is:
 
 ```text
-5 Projects
+Tandem Dual MCU
+
+↓
+
+Phase 1
+
+↓
+
+Command Source Architecture
 ```
 
-Additional projects may be added provided that:
+After the current MVP learner journey has been completed and validated,
+additional learner-facing project families may be introduced.
 
-- the common project template remains sufficient,
-- no new platform feature is required,
-- the learner experience remains consistent,
-- the Reflection workflow remains unchanged.
+Planned future projects include:
 
-The platform should grow by adding projects, not by redesigning the learning architecture.
+- Class Concept Robot
+- additional robotics projects
+- additional software engineering projects
+- additional learner-facing project families
+
+Every future project should preserve the validated Project Template
+Architecture.
+
+Rather than introducing a different learning architecture, each new project
+should validate the same constitutional learner experience within a different
+engineering domain.
+
+Additional learner-facing projects may be added only when:
+
+- the validated Project Template Architecture remains sufficient,
+- no new platform architecture is required,
+- the constitutional learning flow remains consistent,
+- meaningful comparison remains explicit,
+- Reflection continues to remain optional,
+- repository boundaries remain unchanged.
+
+The repository should evolve by validating learner experiences rather than
+redesigning the learning architecture.
 
 ---
 
 # How New Projects Are Created
 
-Every new project begins from the common authoring template.
+During the current MVP, new learner-facing projects should follow:
 
-```text
-templates/project-template/
+- [Project Template Architecture](../docs/architecture/PROJECT_TEMPLATE_ARCHITECTURE.md)
+- [Tandem Dual MCU](./tandem-dual-mcu/)
 
-↓
+The Tandem Dual MCU project currently serves as the validated reference
+implementation of the Fribot Learning Project Architecture.
 
-Copy
-
-↓
-
-projects/<new-project>/
-```
-
-Project authors should never create a completely new directory structure.
-
-Consistency is part of the learning experience.
-
-The common authoring template is available here:
-
-- [Project Authoring Template](../templates/project-template/)
+A reusable Project Authoring Template will be extracted after multiple
+project families have been validated.
 
 ---
 
@@ -317,7 +473,7 @@ before becoming comfortable with GitHub workflows.
 
 # Relationship with InnerMirror
 
-Projects naturally conclude with Reflection.
+Projects naturally conclude with an opportunity for Reflection.
 
 The intended learner experience is:
 
@@ -330,20 +486,25 @@ Practical Experience
 
 ↓
 
-Reflection Entry
+Optional Reflection
 
 ↓
 
 InnerMirror
-
-↓
-
-Insight
 ```
 
-The project creates the experience.
+The project creates the learning experience.
 
-InnerMirror preserves how the learner's understanding changes through that experience.
+InnerMirror provides a place where learners may continue their Reflection
+after completing a project.
+
+During the current MVP:
+
+- Reflection remains optional,
+- learners write a general Reflection,
+- no project-specific Reflection type is introduced,
+- no project context is automatically transferred,
+- no private Runtime processing is exposed.
 
 Projects do **not**:
 
@@ -352,7 +513,8 @@ Projects do **not**:
 - interpret Reflection,
 - store Reflection internally.
 
-Projects simply provide the bridge.
+Projects simply provide the bridge between project experience and optional
+Reflection.
 
 ---
 
