@@ -803,3 +803,12 @@ The architecture may remain stable.
 The most important change may occur in how you understand them.
 
 That change is the beginning of the next project.
+
+---
+
+# Next Project
+
+When you can explain what generated the command and what remained stable,
+continue to:
+
+- [Project 02 — User-Generated Commands](../02_user_generated_commands/README.md)
