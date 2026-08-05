@@ -24,7 +24,8 @@ Each project combines:
 
 The objective is to help learners improve not only what they build, but also **how they think while building software**.
 
-Projects should create meaningful engineering experiences that naturally lead learners into Reflection.
+Projects should create meaningful engineering experiences that may naturally
+lead learners into optional Reflection.
 
 ---
 
@@ -269,7 +270,9 @@ Understanding emerges from comparison rather than memorization.
 
 ## Optional Reflection
 
-Reflection belongs to InnerMirror.
+Projects create the learning experience.
+
+InnerMirror provides the optional continuation point for Reflection.
 
 Projects simply create the conditions from which Reflection may naturally
 emerge.
@@ -442,6 +445,9 @@ implementation of the Fribot Learning Project Architecture.
 A reusable Project Authoring Template will be extracted after multiple
 project families have been validated.
 
+During the current MVP, the validated architecture is considered more
+important than a reusable template.
+
 ---
 
 # Relationship with GitHub
@@ -468,6 +474,9 @@ A learner should be able to:
 - complete the first experiment,
 
 before becoming comfortable with GitHub workflows.
+
+Learners should be able to begin meaningful project work before becoming
+comfortable with GitHub workflows.
 
 ---
 
@@ -576,7 +585,7 @@ A project should begin with action,
 
 lead naturally toward understanding,
 
-and finish by encouraging Reflection.
+and create the conditions from which optional Reflection may emerge.
 
 Every project in this directory should preserve that principle.
 

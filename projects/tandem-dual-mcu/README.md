@@ -50,7 +50,7 @@ The deeper objective is to understand:
 - command generation,
 - interpretation,
 - execution,
-- and stable system boundaries.
+- aand how meaningful comparison reveals system architecture.
 
 ---
 
@@ -686,13 +686,8 @@ Fribot Learning provides:
 - learning questions,
 - optional Reflection prompts.
 
-InnerMirror owns private responsibilities such as:
-
-- Reflection analysis,
-- continuity,
-- memory,
-- private coaching,
-- long-term understanding.
+InnerMirror provides a place where learners may continue their Reflection
+after completing a project.
 
 The MVP relationship is:
 
@@ -722,9 +717,15 @@ and
 Learner-Owned
 ```
 
-No project-specific Reflection type is introduced.
+During the current MVP:
 
-No project metadata is automatically transferred during the MVP.
+- learners write a general Reflection,
+- no project-specific Reflection type is introduced,
+- no project metadata is automatically transferred,
+- no private Runtime behaviour is exposed.
+
+The internal implementation of Reflection processing belongs to the
+InnerMirror ecosystem and remains outside the scope of this repository.
 
 ---
 
@@ -772,6 +773,9 @@ Advanced topics such as:
 may be connected after the MVP learning path is complete.
 
 No Phase 2 project is created or required by the current milestone.
+
+Future work will begin only after the current MVP learner journey has been
+completed and validated.
 
 ---
 
@@ -866,3 +870,5 @@ The comparison is the learning process.
 The stable architecture is the discovery.
 
 That is the purpose of Tandem Phase 1.
+
+Meaningful Reflection may naturally emerge from that discovery.
