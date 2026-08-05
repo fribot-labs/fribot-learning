@@ -23,19 +23,65 @@ The objective is to:
 
 ## Quick Start
 
-The first learner-facing projects are currently being developed.
+The current MVP centers on one validated learner-facing project.
 
-- [Class Concept Robot](./projects/class-concept-robot/)
+### Recommended First Project
+
 - [Tandem Dual MCU](./projects/tandem-dual-mcu/)
 
-For the complete project collection, see:
+The current validated learning unit is:
+
+```text
+Tandem Phase 1
+
+↓
+
+Command Source Architecture
+```
+
+Learners begin by comparing three different command sources.
+
+```text
+Program
+
+↓
+
+User
+
+↓
+
+Environment
+```
+
+while preserving one stable Tandem architecture.
+
+---
+
+### Planned Future Projects
+
+Additional learner-facing projects will be introduced after the current MVP
+learner journey has been completed and validated.
+
+Current planned projects include:
+
+- [Class Concept Robot](./projects/class-concept-robot/)
+
+---
+
+### Project Collection
+
+For the complete collection of learner-facing projects, see:
 
 - [PBL Projects](./projects/)
 
-Every project follows the same basic learning flow.
+---
+
+### Constitutional Learning Flow
+
+This flow describes how understanding emerges during one learning experience.
 
 ```text
-Start
+Predict
 
 ↓
 
@@ -43,7 +89,11 @@ Run
 
 ↓
 
-Modify
+Observe
+
+↓
+
+Compare
 
 ↓
 
@@ -51,11 +101,17 @@ Understand
 
 ↓
 
-Reflect
+Optional Reflection
 ```
 
-> The initial project directories are currently in the `Planned` stage.  
-> Complete learner-facing content will be added through separate Pull Requests.
+---
+
+> **Current MVP Status**
+>
+> Tandem Dual MCU Phase 1 is the first validated learner-facing project.
+>
+> Additional project families will be added after the current MVP learner
+> journey has been fully completed and verified.
 
 ---
 
@@ -84,26 +140,42 @@ Fribot Learning focuses on:
 
 ## MVP Learning Flow
 
-The current MVP is designed around one continuous learner experience.
+This flow describes the learner's journey through the Fribot ecosystem.
 
 ```text
-Project
+MVP User Journey
+
+Project Discovery
 
 ↓
 
-Run
+Project Experience
 
-↓
+        ↓
 
-Modify
+        Constitutional Learning Flow
 
-↓
+        Predict
 
-Understand
+        ↓
 
-↓
+        Run
 
-Reflect
+        ↓
+
+        Observe
+
+        ↓
+
+        Compare
+
+        ↓
+
+        Understand
+
+        ↓
+
+        Optional Reflection
 
 ↓
 
@@ -111,7 +183,7 @@ InnerMirror
 
 ↓
 
-Insight
+Long-Term Growth
 ```
 
 The project creates experience.
@@ -140,44 +212,146 @@ The learner should begin with an approachable action, observe a visible result, 
 
 ## Current MVP
 
-The current MVP intentionally remains small.
+The current MVP intentionally remains focused on one complete learner journey.
 
-It focuses on:
+It currently focuses on:
 
-- learner-facing project templates,
+- discoverable learner-facing projects,
+- validated learner-facing project architecture,
 - practical project experience,
-- reusable project structure,
-- optional GitHub workflow,
-- Reflection entry,
-- InnerMirror integration.
+- meaningful comparison,
+- optional GitHub recording,
+- optional InnerMirror Reflection entry.
 
-The MVP does **not** attempt to become a complete learning management system.
+The current MVP does **not** attempt to become:
+
+- a complete learning management system,
+- a project management platform,
+- a coaching platform,
+- or a Runtime intelligence platform.
 
 It does not currently include:
 
 - learner scoring,
 - progress dashboards,
+- mandatory GitHub integration,
 - automatic GitHub synchronization,
+- GitHub OAuth,
 - AI-generated curriculum,
 - project-specific Reflection types,
+- personalized PBL Coaching,
+- Decision Review,
 - public Runtime intelligence,
-- private learner modeling.
+- private learner modeling,
+- Growth Portfolio.
 
-The immediate goal is to validate whether meaningful project experiences naturally lead to valuable Reflection.
+The immediate objective is to validate one complete learner journey.
+
+```text
+Project Discovery
+
+↓
+
+Project Experience
+
+↓
+
+Meaningful Comparison
+
+↓
+
+Optional Reflection
+
+↓
+
+InnerMirror
+```
+
+Only after this learner journey has been validated should additional project
+families, advanced learning phases, reusable templates, or Runtime-driven
+features be introduced.
 
 ---
 
 ## Current MVP Projects
 
-### Class Concept Robot
+The current MVP validates one complete learner-facing project before expanding
+to additional project families.
+
+---
+
+### Validated MVP Project
+
+#### Tandem Dual MCU
+
+- [Open Project](./projects/tandem-dual-mcu/)
+
+Status:
+
+```text
+Validated MVP Learning Project
+```
+
+Current validated learning unit:
+
+```text
+Tandem Phase 1
+
+↓
+
+Command Source Architecture
+```
+
+The learner compares three different command sources.
+
+```text
+Program
+
+↓
+
+User
+
+↓
+
+Environment
+```
+
+while preserving one stable Tandem architecture.
+
+The project gradually introduces:
+
+- command generation,
+- interpretation,
+- communication,
+- responsibility separation,
+- coordinated execution,
+- structural continuity across changing inputs.
+
+This project currently serves as the first validated implementation of the
+Fribot Learning Project Architecture.
+
+---
+
+### Planned Future Projects
+
+The following learner-facing projects are intentionally deferred until the
+current MVP learner journey has been completed and validated.
+
+#### Class Concept Robot
 
 - [Open Project](./projects/class-concept-robot/)
 
+Status:
+
+```text
+Planned (Post-MVP Content Expansion)
+```
+
 Purpose:
 
-Help beginners understand that a class is more than C++ syntax.
+Help learners understand that a class is more than C++ syntax.
 
-The project begins with familiar procedural code and gradually introduces:
+The project will gradually introduce:
 
 - state,
 - behavior,
@@ -186,53 +360,16 @@ The project begins with familiar procedural code and gradually introduces:
 - private boundary,
 - why related state and behavior are grouped together.
 
-Status:
+The project is expected to follow the same validated constitutional learning
+structure established by the Tandem Dual MCU project.
 
-```text
-Planned
-```
-
----
-
-### Tandem Dual MCU
-
-- [Open Project](./projects/tandem-dual-mcu/)
-
-Purpose:
-
-Help learners understand responsibility separation and collaboration between two microcontrollers.
-
-The project gradually introduces:
-
-- independent execution,
-- communication,
-- coordination,
-- responsibility separation,
-- failure isolation.
-
-Status:
-
-```text
-Planned
-```
+It is not part of the current MVP completion path.
 
 ---
 
 ## Common Project Structure
 
-Every learner-facing project follows the same minimum structure.
-
-```text
-project-name/
-├─ README.md
-├─ 01_START.md
-├─ 02_RUN.md
-├─ 03_MODIFY.md
-├─ 04_UNDERSTAND.md
-├─ 05_REFLECT.md
-├─ starter-code/
-└─ references/
-```
+Every learner-facing project follows one common constitutional architecture.
 
 Projects may differ in:
 
@@ -242,15 +379,23 @@ Projects may differ in:
 - reference material,
 - starter code.
 
-They should not create a different learning architecture for every topic.
+They should not introduce a different learner-facing architecture for every
+topic.
 
-The common structure is defined in:
+The common learner-facing architecture is defined in:
 
 - [Project Template Architecture](./docs/architecture/PROJECT_TEMPLATE_ARCHITECTURE.md)
 
-Project authors should begin from:
+The current architecture has been validated through:
 
-- [Project Authoring Template](./templates/project-template/)
+- [Tandem Dual MCU](./projects/tandem-dual-mcu/)
+
+During the current MVP, new learner-facing projects should follow the
+validated Project Template Architecture and the Tandem Dual MCU reference
+implementation.
+
+A reusable Project Authoring Template will be extracted after multiple
+project families have been validated.
 
 ---
 
@@ -407,12 +552,14 @@ fribot-learning/
 ├─ assets/
 ├─ docs/
 ├─ projects/
-├─ templates/
 ├─ README.md
 ├─ SECURITY.md
 ├─ VERSIONING.md
 ├─ CHANGELOG.md
 └─ LICENSE
+
+Reserved for future reusable authoring templates.
+
 ```
 
 ### `projects/`
@@ -507,18 +654,35 @@ Private Runtime implementation must not be added to this repository.
 
 ## Contributing
 
-Before implementing new features, contributors should read:
+Before implementing new features or creating new learner-facing projects,
+contributors should review the following documentation.
 
 1. [Foundation Documentation](./docs/foundation/)
 2. [Architecture Documentation](./docs/architecture/)
 3. [Project Template Architecture](./docs/architecture/PROJECT_TEMPLATE_ARCHITECTURE.md)
 4. [PBL MVP Master Plan](./docs/roadmap/PBL_MVP_MASTER_PLAN.md)
 
-Project authors should begin from:
+During the current MVP, new learner-facing projects should be designed by
+following:
 
-- [Project Authoring Template](./templates/project-template/)
+- [Project Template Architecture](./docs/architecture/PROJECT_TEMPLATE_ARCHITECTURE.md)
+- [Tandem Dual MCU](./projects/tandem-dual-mcu/)
 
-Implementation should follow the approved Foundation and Architecture Documentation rather than silently redefining them.
+The Tandem Dual MCU project currently serves as the validated reference
+implementation of the Fribot Learning Project Architecture.
+
+A reusable Project Authoring Template will be extracted after multiple
+project families have been validated.
+
+Implementation should preserve the approved:
+
+- Foundation Documentation,
+- Constitution Documentation,
+- Architecture Documentation,
+- and Roadmap Documentation,
+
+rather than silently redefining repository responsibilities or learner-facing
+project structure.
 
 ---
 
@@ -534,16 +698,44 @@ Current stage:
 
 ```text
 Foundation Complete
-Project Template Architecture Established
-Initial MVP Projects In Development
+
+Constitution Applied
+
+Architecture Complete
+
+Tandem Phase 1 Complete
+
+MVP Completion In Progress
 ```
 
-Current priorities:
+---
 
-- complete the Class Concept Robot project,
-- connect its Reflection entry to InnerMirror,
-- validate the first end-to-end learner experience,
-- add the Tandem Dual MCU project using the same structure.
+### Current MVP Priorities
+
+The current development priority is to complete one coherent learner journey.
+
+Current work focuses on:
+
+- completing the remaining MVP learner journey,
+- improving repository learning entry navigation,
+- completing the learner-facing project catalog,
+- finalizing the optional InnerMirror Reflection entry,
+- validating the complete end-to-end learner experience,
+- preparing the repository for MVP release.
+
+---
+
+### Planned After MVP
+
+The following work is intentionally planned after the current MVP learner
+journey has been completed and validated.
+
+- Class Concept Robot,
+- additional learner-facing project families,
+- Tandem Phase 2,
+- advanced learning concepts,
+- Runtime-driven educational features.
+```
 
 ---
 
