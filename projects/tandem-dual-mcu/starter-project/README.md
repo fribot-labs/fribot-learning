@@ -804,7 +804,8 @@ Fribot Learning does not perform:
 - identity interpretation,
 - private coaching generation.
 
-Those responsibilities belong to InnerMirror Runtime.
+Those responsibilities belong to the InnerMirror ecosystem and remain
+outside the scope of this repository.
 
 Reflection remains:
 
@@ -830,8 +831,7 @@ Learners may use GitHub to record:
 - commits,
 - pull requests,
 - source changes,
-- troubleshooting history,
-- decision evolution.
+- troubleshooting history.
 
 However, GitHub should not prevent a learner from beginning the physical
 project experience.
@@ -920,5 +920,7 @@ The larger execution architecture remains stable.
 
 The learner completes Tandem Phase 1 when this repeating structure becomes
 visible beneath three different experiences.
+
+Meaningful Reflection may naturally emerge from that comparison.
 
 That is the purpose of this Starter Project navigation.
