@@ -59,6 +59,39 @@ Execution
 
 ---
 
+# How to Use This Directory
+
+If this is your first visit, follow the learning path below.
+
+```text
+Shared Setup
+
+↓
+
+Project 01
+
+↓
+
+Project 02
+
+↓
+
+Project 03
+
+↓
+
+Optional Reflection
+```
+
+Do not begin with Project 02 or Project 03.
+
+Each project uses the previous project as a comparison baseline.
+
+Meaningful understanding emerges through comparison rather than by skipping
+ahead.
+
+---
+
 # Before Starting
 
 Before opening Starter Project 01, prepare the shared hardware and software
@@ -924,3 +957,37 @@ visible beneath three different experiences.
 Meaningful Reflection may naturally emerge from that comparison.
 
 That is the purpose of this Starter Project navigation.
+
+---
+
+---
+
+# After Phase 1
+
+When you complete Tandem Phase 1, you may choose to continue your learning in
+one of two ways.
+
+```text
+Continue Exploring
+
+↓
+
+Future Fribot Learning Projects
+```
+
+or
+
+```text
+Optional Reflection
+
+↓
+
+InnerMirror
+```
+
+Reflection remains optional.
+
+The purpose of Reflection is not to evaluate the project.
+
+It is to preserve what changed in your own understanding after completing
+the learning experience.
