@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "v1",
+  "templateId": "pbl-project-template-v1",
+  "courseId": "class-concept-robot",
+  "title": "Class Concept Robot",
+  "difficulty": "beginner",
+  "estimatedWeeks": 4,
+  "learningGoal": "Understand why related state and behavior can be organized together through a class in robot programming."
+}

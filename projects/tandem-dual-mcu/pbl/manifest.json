@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "v1",
+  "templateId": "pbl-project-template-v1",
+  "courseId": "tandem-dual-mcu",
+  "title": "Tandem Dual MCU",
+  "difficulty": "beginner",
+  "estimatedWeeks": 6,
+  "learningGoal": "Understand how two microcontrollers divide responsibilities, communicate, and coordinate robot behavior."
+}
