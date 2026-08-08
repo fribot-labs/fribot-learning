@@ -12,6 +12,32 @@ creating a new project.
 
 Every new PBL project should begin from this template.
 
+This template also defines the minimum structure that must be preserved when a
+validated PBL course is exported into a learner-owned GitHub repository.
+
+The exported repository becomes the learner's actual working project.
+
+In this model:
+
+```text
+fribot-learning
+=
+Project Catalog and Source Templates
+
+↓
+
+Project Export
+
+↓
+
+Learner-owned GitHub Repository
+=
+Active Learner Project
+```
+
+The learner repository, rather than the public `fribot-learning` catalog,
+becomes the project observed by InnerMirror and the private Runtime.
+
 ---
 
 # Purpose
@@ -55,6 +81,9 @@ Reflect
 
 This consistency allows learners to focus on the project itself rather than
 learning a different educational structure every time.
+
+This template also defines the minimum export structure required for a
+validated course to become an independent learner-owned project repository.
 
 ---
 
@@ -238,6 +267,9 @@ One meaningful question is enough.
 Every learner-facing project must contain the following files.
 
 ```text
+pbl/
+└── manifest.json
+
 README.md
 
 01_START.md
@@ -250,15 +282,118 @@ README.md
 
 05_REFLECT.md
 
-starter-code/
+starter-materials
 
 references/
 ```
 
-These files define the minimum learner experience.
+These files define the minimum learner experience and the minimum project
+integration contract.
+
+The `pbl/manifest.json` file is not a learning-stage document.
+
+It is a machine-readable public metadata contract used when the project is
+exported into a learner-owned GitHub repository.
+
+Every exported learner repository must preserve this file at:
+
+```text
+pbl/manifest.json
+```
+
+relative to the repository root.
 
 Projects may add files when genuinely required, but should not remove the
-common stages.
+common stages or the standard PBL manifest.
+
+---
+
+# Starter Materials
+
+The executable starter directory
+(for example `starter-code/`
+or `starter-project/`)
+contains the minimum files required to begin.
+
+Different projects may use different directory names.
+
+However, every project should preserve the same educational responsibility.
+
+---
+
+# PBL Manifest
+
+Every exportable PBL project must contain:
+
+```text
+pbl/manifest.json
+```
+
+The manifest identifies the project to InnerMirror without exposing private
+learner information or Runtime internals.
+
+The MVP manifest uses schema version `v1`.
+
+Example:
+
+```json
+{
+  "schemaVersion": "v1",
+  "templateId": "pbl-project-template-v1",
+  "courseId": "example-course",
+  "title": "Example Course",
+  "difficulty": "beginner",
+  "estimatedWeeks": 4,
+  "learningGoal": "Describe the primary learning goal of this project."
+}
+```
+
+All manifest fields defined by schema `v1` must remain present.
+
+Fields that do not yet have a course-specific value should use `null` rather
+than being omitted.
+
+The fields have the following responsibilities:
+
+- `schemaVersion` identifies the metadata contract version.
+- `templateId` identifies the common project-template family.
+- `courseId` identifies the specific learning course.
+- `title` provides the public project title.
+- `difficulty` provides a short learner-facing difficulty description.
+- `estimatedWeeks` provides the expected project duration as a number.
+- `learningGoal` describes the primary learning purpose of the course.
+
+For the reusable authoring template, course-specific values may remain `null`.
+
+Example:
+
+```json
+{
+  "schemaVersion": "v1",
+  "templateId": "pbl-project-template-v1",
+  "courseId": null,
+  "title": null,
+  "difficulty": null,
+  "estimatedWeeks": null,
+  "learningGoal": null
+}
+```
+
+When creating a real course from this template, project authors should replace
+the course-specific values with the appropriate public metadata.
+
+The manifest must contain only public educational metadata.
+
+It must never contain:
+
+- learner identity,
+- personal Reflection content,
+- private Runtime output,
+- recommendation data,
+- cognitive interpretation,
+- private learner memory,
+- credentials,
+- secrets.
 
 ---
 
@@ -358,6 +493,22 @@ connecting GitHub.
 
 GitHub integration should never prevent the first project experience.
 
+GitHub remains optional for the learner's first educational experience.
+
+However, when a learner chooses the Project Export path, the exported GitHub
+repository becomes the active project boundary.
+
+The exported repository should preserve:
+
+```text
+pbl/manifest.json
+```
+
+so that InnerMirror can discover the project's public educational metadata.
+
+Project Export must not make GitHub a prerequisite for understanding,
+previewing, or initially running the learning material.
+
 ---
 
 # Project Completion
@@ -407,6 +558,51 @@ Before publishing a new project, verify:
 - [ ] No private Runtime behavior is exposed.
 - [ ] GitHub remains optional.
 - [ ] The project can be understood without reading the entire documentation.
+
+## Project Export
+
+- [ ] `pbl/manifest.json` exists.
+- [ ] `schemaVersion` is `v1`.
+- [ ] `templateId` identifies the project-template family.
+- [ ] All schema `v1` manifest fields are present; unavailable values use `null` rather than being omitted.
+- [ ] `courseId` identifies the specific course when applicable.
+- [ ] Course-specific manifest values are completed before learner-facing export.
+- [ ] The manifest contains only public educational metadata.
+- [ ] No learner identity, Reflection content, private Runtime output, or recommendation data is stored in the manifest.
+- [ ] Project Export preserves `pbl/manifest.json` at the root-relative path `pbl/manifest.json`.
+- [ ] The exported repository can operate as an independent learner-owned project.
+- [ ] Exporting the project does not require changes to the original `fribot-learning` catalog.
+
+---
+
+# Project Export Rule
+
+A validated course may be exported from the Fribot Learning catalog into a
+learner-owned GitHub repository.
+
+Project Export must preserve the educational structure and the public metadata
+contract.
+
+```text
+Fribot Learning
+owns
+the catalog and source template
+
+↓
+
+Learner
+owns
+the exported project repository
+
+↓
+
+InnerMirror
+uses
+the repository as public project context
+```
+
+Project Export must not transfer private Reflection, Runtime analysis, or
+learner-specific cognitive data.
 
 ---
 

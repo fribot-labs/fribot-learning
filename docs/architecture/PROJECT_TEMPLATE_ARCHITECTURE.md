@@ -356,6 +356,58 @@ The common architecture should not be redesigned for every project.
 
 ---
 
+## 6.3 Project Export Contract
+
+> **Project Export** means creating a learner-owned GitHub repository from a validated Fribot Learning project template while preserving the standard `pbl/manifest.json` contract.
+
+The `fribot-learning` repository is the public catalog of learner-facing PBL
+projects.
+
+Learners normally do not perform project work directly inside this repository.
+
+Instead, one validated course is exported into a learner-owned GitHub
+repository.
+
+The exported repository becomes the learner's actual working project.
+
+The intended lifecycle is:
+
+```text
+fribot-learning
+
+↓
+
+Project Catalog
+
+↓
+
+Course Selection
+
+↓
+
+Project Export
+
+↓
+
+Learner-owned GitHub Repository
+
+↓
+
+InnerMirror
+
+↓
+
+Runtime
+```
+
+This separation keeps educational content, learner work, and Runtime analysis
+independent while preserving one continuous learning experience.
+
+The learner repository, rather than the public catalog, represents the active
+project analyzed by InnerMirror.
+
+---
+
 # 7. Why `projects/` and `templates/` Are Separate
 
 The two directories have different responsibilities.
@@ -390,6 +442,8 @@ Every complete project should use the following minimum top-level structure.
 
 ```text
 project-id/
+├── pbl/
+│   └── manifest.json
 ├── README.md
 ├── 01_START.md
 ├── 02_RUN.md
@@ -400,11 +454,16 @@ project-id/
 └── references/
 ```
 
-Additional files and subdirectories may be added when the project genuinely
-requires them.
+Every exported learner repository must preserve the
+`pbl/manifest.json` file at the repository root.
 
-A project must not introduce a different top-level learning lifecycle without
-a separate architecture decision.
+This manifest defines the public project metadata used by
+InnerMirror during project discovery.
+
+The manifest contains only public educational metadata.
+
+It must never contain learner-specific data or private Runtime
+information.
 
 ---
 
@@ -1394,6 +1453,12 @@ In the MVP:
 - Fribot Learning does not privately interpret the Reflection,
 - Fribot Learning does not call the private Runtime directly.
 
+The exported learner repository provides the public project metadata used
+during the transition into InnerMirror.
+
+InnerMirror may discover this metadata through the standard
+`pbl/manifest.json` contract while preserving repository boundaries.
+
 ---
 
 # 27. Project Context Transfer Rule
@@ -1424,6 +1489,27 @@ Project context must not include:
 - private coaching instructions.
 
 The learner should understand when project context is being submitted.
+
+The public project context originates from the learner repository's
+`pbl/manifest.json`.
+
+This manifest defines only public educational metadata such as:
+
+- project title,
+- course identifier,
+- template identifier,
+- difficulty,
+- estimated learning duration,
+- learning goal.
+
+The manifest must never include:
+
+- learner identity,
+- personal Reflection,
+- Runtime analysis,
+- cognitive interpretation,
+- private recommendation data,
+- user-specific progress.
 
 ---
 
@@ -2145,3 +2231,30 @@ And:
 > **Educational responsibilities must remain visible.**
 
 This rule governs all MVP project additions.
+
+The repository responsibilities remain separated:
+
+```text
+fribot-learning
+    owns
+Project Catalog
+and
+Project Templates
+
+↓
+
+Learner
+owns
+the exported GitHub Repository
+
+↓
+
+InnerMirror
+owns
+Reflection,
+Runtime,
+and
+Recommendation Intelligence
+```
+
+This separation preserves constitutional repository boundaries while enabling one continuous learner journey across multiple services.
